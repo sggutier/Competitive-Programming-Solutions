@@ -44,7 +44,7 @@ int main() {
         scanf("%d", &vals[i]);
     for(int i=0; i<3; i++) {
         for(int j=i; j<3; j++) {
-            cmbs.push_back({vals[i] + vals[j], i, j});
+            cmbs.emplace_back(vals[i] + vals[j], i, j);
         }
     }
     N /= 2;
