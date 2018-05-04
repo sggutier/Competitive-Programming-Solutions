@@ -1,3 +1,20 @@
+/*
+- The problem has to be solved for every set of "connected" nodes, as if it was a forest.
+- If a component has no SCCs, the nodes can be arranged in a big linear chain,
+  in such way that they are ordered by topological sort.  This takes n-1 teleporters,
+  and keeps all the desired orders.
+- If a component has at least a SCC, it requires w edges, where w is the amount of nodes in
+  the SCC.  This altogether makes the set of nodes require at least n teleporters.  Since
+  n edges are already going to be used (because of the extra edge of the SCC), all the nodes
+  in the set can be arranged in a big cycle requiring n edges.  This has to be the
+  least amount of edges because n-1 edges cannot be reached because of the SCC.
+- For programming it each set can be kept together with a DSU, and Tarjan's algorithm for
+  SCC would be used for finding SCCs.
+- This has a complexity of about O((E + N) log N), because each query of the DSU takes about 
+  O(log N) operations and it is going to be queried for each edge and node at the end.
+  Tarjan is linear so it would not affect the complexity.
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 const int limN = 1e5 + 5;

@@ -1,3 +1,19 @@
+/*
+- I solved this becasue of a gut feeling.  I thought that for writing a number in
+  base -2, it would need to have a power of -2 of its own sign either as big or a little
+  bigger than it.
+- The reason for picking the power of 2 of the same sign that was just bigger is that it
+  could be the one that was able to be "swayed around".  Even with powers of 2 of the same
+  sign, 1 + \ldots + 2^n < 2^{n+1}, so a bigger one is not neccessary.  For this same reason,
+  picking something whose absolute value is bigger than the current number but of opposite
+  sign does not make a lot of sense.
+- If the bigger-absolute-value-than-the-current-number-but-with-same-sign number was not
+  going to be used, that would mean that either the current number matches perfectly a power
+  of -2, or that it can be summed with some of the powers of 2 with absolute value
+  lesser or equal than the abs of the current number.
+- I'm aware that this is not a proof, but it looked good enough to me and I was pretty sure
+  it would work.
+ */
 #include <cstdio>
 #include <iostream>
 #include <cstring>

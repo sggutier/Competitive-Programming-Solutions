@@ -1,3 +1,21 @@
+/*
+- The priority in this problem is to minimize the amount of days for fixing the bugs, given
+  that it fits in the budget.  Fixing it in more days surely would be cheaper, since a
+  student can be made work more days.  This kind of thing makes one think a binary search
+  would be feasible.
+- For checking every instance of the binary search (one that has to be done in K days),
+  the most difficult bug makes neccessary to hire a student with at least enough ability
+  to fix it.  Hiring the cheapest one would be the best, since this student can be forced
+  to fix the next K-1 bugs easier than the harder one since the objective is to get the
+  job done in K days.
+- This leaves the remaining bugs in the same conditions, having to hire the cheapest
+  student and so on.
+- For doing all this, the students and the bugs would have to be sorted, with complexity
+  of O(n log n)
+- For looking the cheapest one, a priority queue can be used.  Each instance of the binary
+  search can be done in O(n log n), and since it takes at most n days to solve it,
+  the binary search has O(log n) instances and  altogether takes O(n log^2 n).
+ */
 #include <bits/stdc++.h>
 using namespace std;
 typedef pair<int,int> pii;

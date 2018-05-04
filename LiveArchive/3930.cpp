@@ -1,3 +1,12 @@
+/*
+- It only makes sense to get all the cards down at the end, and this also makes it simpler.
+- The game is decided by the number of equilateral triangles that can be made, so it is
+  more important to get as many of these made.  Then one has to make as many non-degenerate
+  triangles as possible.
+- There are 13 sizes available for the sides of triangles, and at most 2 sizes would remain.
+  This means the rest can be done with a DP, trying to maximize the number of triangles,
+  the state being the amount of sides of each size remaining.   These are 3^13 states.
+ */
 #include <bits/stdc++.h>
 using namespace std;
 typedef pair<int, int> pii;
