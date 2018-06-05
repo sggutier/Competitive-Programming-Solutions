@@ -1,0 +1,219 @@
+#+BEGIN: clocktable :maxlevel 2 :scope file :block thisweek
+#+CAPTION: Clock summary at [2018-06-04 lun 23:30], for week 2018-W23.
+| Headline      | Time |      |
+|---------------+------+------|
+| *Total time*    | *4:51* |      |
+|---------------+------+------|
+| [[http://codeforces.com/contest/129/problem/D][CF129-D2-D]]    | 1:10 |      |
+| \_  Pensar    |      | 0:10 |
+| \_  Programar |      | 0:20 |
+| \_  Debugear  |      | 0:40 |
+| [[https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=26&page=show_problem&problem=2419][UVa 11424]]     | 0:18 |      |
+| \_  Programar |      | 0:18 |
+| [[https://www.hackerrank.com/challenges/billboards/problem][HR-Billboard]]  | 0:16 |      |
+| \_  Leer      |      | 0:03 |
+| \_  Pensar    |      | 0:06 |
+| \_  Programar |      | 0:05 |
+| \_  Debugear  |      | 0:02 |
+| SRM452-D1-500 | 0:54 |      |
+| \_  Leer      |      | 0:03 |
+| \_  Pensar    |      | 0:51 |
+| [[https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=16&page=show_problem&problem=4197][UVa 1451]]      | 2:13 |      |
+| \_  Leer      |      | 0:03 |
+| \_  Pensar    |      | 0:44 |
+| \_  Programar |      | 1:26 |
+#+END:
+
+
+* CF86D
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-05-30 mer 17:01]--[2018-05-30 mer 17:03] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-05-30 mer 17:03]--[2018-05-30 mer 17:38] =>  0:35
+   :END:
+* CF732D
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-05-30 mer 17:44]--[2018-05-30 mer 17:47] =>  0:03
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-05-30 mer 17:47]--[2018-05-30 mer 18:00] =>  0:13
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-05-30 mer 18:00]--[2018-05-30 mer 18:10] =>  0:10
+   :END:
+** Debuguear
+   :LOGBOOK:
+   CLOCK: [2018-05-30 mer 18:10]--[2018-05-30 mer 18:14] =>  0:00
+   :END:
+* CF552C
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 12:56]--[2018-05-31 ĵaŭ 12:59] =>  0:03
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 12:59]--[2018-05-31 ĵaŭ 13:32] =>  0:33
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 13:32]--[2018-05-31 ĵaŭ 13:36] =>  0:04
+   :END:
+* CF432D
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 13:38]--[2018-05-31 ĵaŭ 13:40] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 14:14]--[2018-05-31 ĵaŭ 14:18] =>  0:04
+   CLOCK: [2018-05-31 ĵaŭ 14:09]--[2018-05-31 ĵaŭ 14:12] =>  0:03
+   CLOCK: [2018-05-31 ĵaŭ 13:41]--[2018-05-31 ĵaŭ 14:08] =>  0:27
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 14:18]--[2018-05-31 ĵaŭ 14:36] =>  0:18
+   :END:
+* CF489B
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 14:45]--[2018-05-31 ĵaŭ 14:46] =>  0:01
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 14:47]--[2018-05-31 ĵaŭ 14:49] =>  0:02
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 14:49]--[2018-05-31 ĵaŭ 14:52] =>  0:03
+   :END:
+* http://codeforces.com/contest/459/problem/B
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 14:53]--[2018-05-31 ĵaŭ 14:54] =>  0:01
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 14:55]--[2018-05-31 ĵaŭ 14:58] =>  0:03
+   :END:
+** Debugeuar
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 14:59]--[2018-05-31 ĵaŭ 15:00] =>  0:01
+   :END:
+* http://codeforces.com/contest/785/problem/A
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 15:01]--[2018-05-31 ĵaŭ 15:02] =>  0:01
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 15:02]--[2018-05-31 ĵaŭ 15:04] =>  0:02
+   :END:
+* http://codeforces.com/contest/706/problem/B
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 15:07]--[2018-05-31 ĵaŭ 15:08] =>  0:01
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 15:08]--[2018-05-31 ĵaŭ 15:11] =>  0:03
+   :END:
+
+* http://www.spoj.com/problems/MSE08H/
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 16:18]--[2018-05-31 ĵaŭ 16:19] =>  0:01
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 16:58]--[2018-05-31 ĵaŭ 17:02] =>  0:04
+   CLOCK: [2018-05-31 ĵaŭ 16:19]--[2018-05-31 ĵaŭ 16:58] =>  0:39
+   :END:
+
+* [[http://codeforces.com/contest/129/problem/D][CF129-D2-D]]
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-05-31 ĵaŭ 20:28]--[2018-05-31 ĵaŭ 20:30] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-04 lun 10:07]--[2018-06-04 lun 10:17] =>  0:10
+   CLOCK: [2018-05-31 ĵaŭ 21:11]--[2018-05-31 ĵaŭ 21:24] =>  0:13
+   CLOCK: [2018-05-31 ĵaŭ 20:56]--[2018-05-31 ĵaŭ 21:11] =>  0:15
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-04 lun 10:17]--[2018-06-04 lun 10:34] =>  0:17
+   CLOCK: [2018-06-04 lun 10:04]--[2018-06-04 lun 10:07] =>  0:03
+   CLOCK: [2018-05-31 ĵaŭ 20:47]--[2018-05-31 ĵaŭ 20:56] =>  0:09
+   CLOCK: [2018-05-31 ĵaŭ 20:30]--[2018-05-31 ĵaŭ 20:41] =>  0:11
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-04 lun 11:01]--[2018-06-04 lun 11:21] =>  0:20
+   CLOCK: [2018-06-04 lun 10:40]--[2018-06-04 lun 11:00] =>  0:20
+   :END:
+
+* [[https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=26&page=show_problem&problem=2419][UVa 11424]]
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-01 ven 18:20]--[2018-06-01 ven 18:21] =>  0:01
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-01 ven 18:21]--[2018-06-01 ven 19:05] =>  0:44
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-04 lun 09:40]--[2018-06-04 lun 09:58] =>  0:18
+   :END:
+
+* [[https://www.hackerrank.com/challenges/billboards/problem][HR-Billboard]]
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-04 lun 12:50]--[2018-06-04 lun 12:53] =>  0:03
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-04 lun 12:53]--[2018-06-04 lun 12:59] =>  0:06
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-04 lun 12:59]--[2018-06-04 lun 13:04] =>  0:05
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-04 lun 13:04]--[2018-06-04 lun 13:06] =>  0:02
+   :END:
+
+* SRM452-D1-500
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-04 lun 17:59]--[2018-06-04 lun 18:02] =>  0:03
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-04 lun 18:02]--[2018-06-04 lun 18:53] =>  0:51
+   :END:
+
+* [[https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=16&page=show_problem&problem=4197][UVa 1451]]
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-04 lun 18:54]--[2018-06-04 lun 18:57] =>  0:03
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-04 lun 18:57]--[2018-06-04 lun 19:41] =>  0:44
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-04 lun 22:54]--[2018-06-04 lun 22:59] =>  0:05
+   CLOCK: [2018-06-04 lun 21:56]--[2018-06-04 lun 22:46] =>  0:50
+   CLOCK: [2018-06-04 lun 21:43]--[2018-06-04 lun 21:56] =>  0:13
+   CLOCK: [2018-06-04 lun 21:20]--[2018-06-04 lun 21:38] =>  0:18
+   :END:
