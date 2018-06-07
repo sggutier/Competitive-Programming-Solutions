@@ -1,3 +1,4 @@
+// - Just get the suffix array and calculate the proper possition in the standard way.
 #include <bits/stdc++.h>
 using namespace std;
 #define rep(i, a, b) for(int i = a; i < (b); ++i)
