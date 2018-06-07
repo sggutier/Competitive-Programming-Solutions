@@ -1,27 +1,44 @@
-#+BEGIN: clocktable :maxlevel 2 :scope file :block thisweek
-#+CAPTION: Clock summary at [2018-06-04 lun 23:30], for week 2018-W23.
-| Headline      | Time |      |
-|---------------+------+------|
-| *Total time*    | *4:51* |      |
-|---------------+------+------|
-| [[http://codeforces.com/contest/129/problem/D][CF129-D2-D]]    | 1:10 |      |
-| \_  Pensar    |      | 0:10 |
-| \_  Programar |      | 0:20 |
-| \_  Debugear  |      | 0:40 |
-| [[https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=26&page=show_problem&problem=2419][UVa 11424]]     | 0:18 |      |
-| \_  Programar |      | 0:18 |
-| [[https://www.hackerrank.com/challenges/billboards/problem][HR-Billboard]]  | 0:16 |      |
-| \_  Leer      |      | 0:03 |
-| \_  Pensar    |      | 0:06 |
-| \_  Programar |      | 0:05 |
-| \_  Debugear  |      | 0:02 |
-| SRM452-D1-500 | 0:54 |      |
-| \_  Leer      |      | 0:03 |
-| \_  Pensar    |      | 0:51 |
-| [[https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=16&page=show_problem&problem=4197][UVa 1451]]      | 2:13 |      |
-| \_  Leer      |      | 0:03 |
-| \_  Pensar    |      | 0:44 |
-| \_  Programar |      | 1:26 |
+#+BEGIN: clocktable :maxlevel 2 :scope file :block today
+#+CAPTION: Clock summary at [2018-06-06 mer 22:52], for merkredo, Junio 06, 2018.
+| Headline                                 | Time |      |
+|------------------------------------------+------+------|
+| *Total time*                               | *3:57* |      |
+|------------------------------------------+------+------|
+| [[http://codeforces.com/problemset/problem/746/A][CF746-D2-A]]                               | 0:02 |      |
+| [[http://codeforces.com/problemset/problem/572/A][CF372-D2-A]]                               | 0:04 |      |
+| \_  Leer                                 |      | 0:01 |
+| \_  Programar                            |      | 0:03 |
+| http://codeforces.com/problemset/prob... | 0:04 |      |
+| \_  Pensar                               |      | 0:02 |
+| \_  Programar                            |      | 0:02 |
+| http://codeforces.com/problemset/prob... | 0:12 |      |
+| \_  Leer                                 |      | 0:02 |
+| \_  Pensar                               |      | 0:04 |
+| \_  Programar                            |      | 0:06 |
+| http://codeforces.com/problemset/prob... | 0:19 |      |
+| \_  Leer                                 |      | 0:02 |
+| \_  Pensar                               |      | 0:04 |
+| \_  Programar                            |      | 0:11 |
+| \_  Debugear                             |      | 0:02 |
+| http://codeforces.com/problemset/prob... | 0:59 |      |
+| \_  Leer                                 |      | 0:02 |
+| \_  Pensar                               |      | 0:37 |
+| \_  Programar                            |      | 0:20 |
+| [[http://codeforces.com/problemset/problem/616/D][CF616-D2-D]]                               | 0:09 |      |
+| \_  Leer                                 |      | 0:03 |
+| \_  Programar                            |      | 0:06 |
+| [[http://www.spoj.com/problems/MB1/][SPOJ-MB1]]                                 | 0:10 |      |
+| \_  Leer                                 |      | 0:02 |
+| \_  Programar                            |      | 0:08 |
+| [[http://codeforces.com/problemset/problem/371/D][CF371-D2-D]]                               | 0:26 |      |
+| \_  Leer                                 |      | 0:02 |
+| \_  Pensar                               |      | 0:13 |
+| \_  Programar                            |      | 0:11 |
+| [[https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4040][LA-6029]]                                  | 1:32 |      |
+| \_  Leer                                 |      | 0:01 |
+| \_  Pensar                               |      | 0:19 |
+| \_  Programar                            |      | 0:37 |
+| \_  Debuguear                            |      | 0:35 |
 #+END:
 
 
@@ -123,8 +140,9 @@
    :LOGBOOK:
    CLOCK: [2018-05-31 ĵaŭ 15:08]--[2018-05-31 ĵaŭ 15:11] =>  0:03
    :END:
+   
 
-* http://www.spoj.com/problems/MSE08H/
+* [[http://www.spoj.com/problems/MSE08H/][SPOJ-MSE08H]]
 ** Leer
    :LOGBOOK:
    CLOCK: [2018-05-31 ĵaŭ 16:18]--[2018-05-31 ĵaŭ 16:19] =>  0:01
@@ -216,4 +234,197 @@
    CLOCK: [2018-06-04 lun 21:56]--[2018-06-04 lun 22:46] =>  0:50
    CLOCK: [2018-06-04 lun 21:43]--[2018-06-04 lun 21:56] =>  0:13
    CLOCK: [2018-06-04 lun 21:20]--[2018-06-04 lun 21:38] =>  0:18
+   :END:
+
+* [[http://codeforces.com/problemset/problem/450/D][CF450-D2-D]]
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-05 mar 11:33]--[2018-06-05 mar 11:35] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-05 mar 11:35]--[2018-06-05 mar 11:43] =>  0:08
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-05 mar 17:07]--[2018-06-05 mar 17:18] =>  0:11
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-05 mar 17:18]--[2018-06-05 mar 17:22] =>  0:04
+   :END:
+* [[http://codeforces.com/problemset/problem/441/C][CF441-D2-C]]
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-05 mar 17:24]--[2018-06-05 mar 17:26] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-05 mar 17:26]--[2018-06-05 mar 17:28] =>  0:02
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-05 mar 17:28]--[2018-06-05 mar 17:34] =>  0:06
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-05 mar 17:35]--[2018-06-05 mar 17:44] =>  0:09
+   :END:
+
+* [[http://codeforces.com/problemset/problem/677/D][CF677-D2-D]]
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-05 mar 17:45]--[2018-06-05 mar 17:47] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-05 mar 18:15]--[2018-06-05 mar 18:58] =>  0:43
+   CLOCK: [2018-06-05 mar 18:00]--[2018-06-05 mar 18:09] =>  0:09
+   CLOCK: [2018-06-05 mar 17:47]--[2018-06-05 mar 17:50] =>  0:03
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-05 mar 18:09]--[2018-06-05 mar 18:12] =>  0:03
+   CLOCK: [2018-06-05 mar 17:50]--[2018-06-05 mar 17:55] =>  0:05
+   :END:
+
+* [[https://www.hackerrank.com/challenges/connect-the-country/problem][HR-connect-the-country]]
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-05 mar 20:41]--[2018-06-05 mar 20:44] =>  0:03
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-05 mar 20:44]--[2018-06-05 mar 21:10] =>  0:26
+   :END:
+
+* [[http://codeforces.com/problemset/problem/746/A][CF746-D2-A]]
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 10:59]--[2018-06-06 mer 11:01] =>  0:02
+   :END:
+
+* [[http://codeforces.com/problemset/problem/572/A][CF372-D2-A]]
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 11:02]--[2018-06-06 mer 11:03] =>  0:01
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 11:03]--[2018-06-06 mer 11:06] =>  0:03
+   :END:
+
+* http://codeforces.com/problemset/problem/610/A
+** Leer
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 11:11]--[2018-06-06 mer 11:11] =>  0:00
+   CLOCK: [2018-06-06 mer 11:09]--[2018-06-06 mer 11:11] =>  0:02
+   :END:
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 11:12]--[2018-06-06 mer 11:14] =>  0:02
+   :END:
+
+* http://codeforces.com/problemset/problem/610/B
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 11:15]--[2018-06-06 mer 11:17] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 11:17]--[2018-06-06 mer 11:21] =>  0:04
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 11:22]--[2018-06-06 mer 11:28] =>  0:06
+   :END:
+
+* http://codeforces.com/problemset/problem/979/C
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 11:30]--[2018-06-06 mer 11:32] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 11:39]--[2018-06-06 mer 11:43] =>  0:04
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 11:43]--[2018-06-06 mer 11:47] =>  0:04
+   CLOCK: [2018-06-06 mer 11:32]--[2018-06-06 mer 11:39] =>  0:07
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 11:47]--[2018-06-06 mer 11:49] =>  0:02
+   :END:
+
+* http://codeforces.com/problemset/problem/455/B
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 11:52]--[2018-06-06 mer 11:54] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 12:19]--[2018-06-06 mer 12:44] =>  0:25
+   CLOCK: [2018-06-06 mer 11:54]--[2018-06-06 mer 12:06] =>  0:12
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 12:44]--[2018-06-06 mer 12:52] =>  0:08
+   CLOCK: [2018-06-06 mer 12:07]--[2018-06-06 mer 12:19] =>  0:12
+   :END:
+
+* [[http://codeforces.com/problemset/problem/616/D][CF616-D2-D]]
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 13:04]--[2018-06-06 mer 13:07] =>  0:03
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 13:07]--[2018-06-06 mer 13:13] =>  0:06
+   :END:
+
+* [[http://www.spoj.com/problems/MB1/][SPOJ-MB1]]
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 13:20]--[2018-06-06 mer 13:22] =>  0:02
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 13:23]--[2018-06-06 mer 13:31] =>  0:08
+   :END:
+
+* [[http://codeforces.com/problemset/problem/371/D][CF371-D2-D]]
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 13:33]--[2018-06-06 mer 13:35] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 13:35]--[2018-06-06 mer 13:48] =>  0:13
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 14:03]--[2018-06-06 mer 14:05] =>  0:02
+   CLOCK: [2018-06-06 mer 13:48]--[2018-06-06 mer 13:57] =>  0:09
+   :END:
+
+* [[https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4040][LA-6029]]
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 17:29]--[2018-06-06 mer 17:30] =>  0:01
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 17:30]--[2018-06-06 mer 17:49] =>  0:19
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 22:08]--[2018-06-06 mer 22:11] =>  0:03
+   CLOCK: [2018-06-06 mer 21:33]--[2018-06-06 mer 22:07] =>  0:34
+   :END:
+** Debuguear
+   :LOGBOOK:
+   CLOCK: [2018-06-06 mer 22:17]--[2018-06-06 mer 22:52] =>  0:35
    :END:
