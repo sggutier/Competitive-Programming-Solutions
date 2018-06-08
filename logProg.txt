@@ -1,9 +1,10 @@
 #+BEGIN: clocktable :maxlevel 2 :scope file :block today
-#+CAPTION: Clock summary at [2018-06-07 ĵaŭ 17:47], for ĵaŭdo, Junio 07, 2018.
+#+CAPTION: Clock summary at [2018-06-07 ĵaŭ 21:47], for ĵaŭdo, Junio 07, 2018.
 | Headline       | Time |      |
 |----------------+------+------|
-| *Total time*     | *1:37* |      |
+| *Total time*     | *4:07* |      |
 |----------------+------+------|
+| Documentar     | 2:30 |      |
 | [[https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1771][UVa-10830]]      | 0:19 |      |
 | \_  Leer       |      | 0:01 |
 | \_  Pensar     |      | 0:08 |
@@ -14,6 +15,13 @@
 | \_  Programar  |      | 0:25 |
 | \_  Debugear   |      | 0:07 |
 #+END:
+
+* Documentar
+  :LOGBOOK:
+  CLOCK: [2018-06-07 ĵaŭ 20:54]--[2018-06-07 ĵaŭ 21:46] =>  0:52
+  CLOCK: [2018-06-07 ĵaŭ 17:48]--[2018-06-07 ĵaŭ 19:26] =>  1:38
+  CLOCK: [2018-06-07 ĵaŭ 17:48]--[2018-06-07 ĵaŭ 17:48] =>  0:00
+  :END:
 
 
 * CF86D
@@ -83,7 +91,7 @@
    :LOGBOOK:
    CLOCK: [2018-05-31 ĵaŭ 14:49]--[2018-05-31 ĵaŭ 14:52] =>  0:03
    :END:
-* http://codeforces.com/contest/459/problem/B
+* [[http://codeforces.com/contest/459/problem/B][CF459-D2-B]]
 ** Leer
    :LOGBOOK:
    CLOCK: [2018-05-31 ĵaŭ 14:53]--[2018-05-31 ĵaŭ 14:54] =>  0:01
@@ -96,7 +104,7 @@
    :LOGBOOK:
    CLOCK: [2018-05-31 ĵaŭ 14:59]--[2018-05-31 ĵaŭ 15:00] =>  0:01
    :END:
-* http://codeforces.com/contest/785/problem/A
+* [[http://codeforces.com/contest/785/problem/A][CF785-D2-A]]
 ** Leer
    :LOGBOOK:
    CLOCK: [2018-05-31 ĵaŭ 15:01]--[2018-05-31 ĵaŭ 15:02] =>  0:01
@@ -105,7 +113,7 @@
    :LOGBOOK:
    CLOCK: [2018-05-31 ĵaŭ 15:02]--[2018-05-31 ĵaŭ 15:04] =>  0:02
    :END:
-* http://codeforces.com/contest/706/problem/B
+* [[http://codeforces.com/contest/706/problem/B][CF706-D2-B]]
 ** Leer
    :LOGBOOK:
    CLOCK: [2018-05-31 ĵaŭ 15:07]--[2018-05-31 ĵaŭ 15:08] =>  0:01
@@ -277,7 +285,7 @@
    CLOCK: [2018-06-06 mer 10:59]--[2018-06-06 mer 11:01] =>  0:02
    :END:
 
-* [[http://codeforces.com/problemset/problem/572/A][CF372-D2-A]]
+* [[http://codeforces.com/problemset/problem/572/A][CF572-D2-A]]
 ** Leer
    :LOGBOOK:
    CLOCK: [2018-06-06 mer 11:02]--[2018-06-06 mer 11:03] =>  0:01
@@ -287,7 +295,7 @@
    CLOCK: [2018-06-06 mer 11:03]--[2018-06-06 mer 11:06] =>  0:03
    :END:
 
-* http://codeforces.com/problemset/problem/610/A
+* [[http://codeforces.com/problemset/problem/610/A][CF610-D2-A]]
 ** Leer
 ** Pensar
    :LOGBOOK:
@@ -300,7 +308,7 @@
    CLOCK: [2018-06-06 mer 11:12]--[2018-06-06 mer 11:14] =>  0:02
    :END:
 
-* http://codeforces.com/problemset/problem/610/B
+* [[http://codeforces.com/problemset/problem/610/B][CF610-D2-B]]
 ** Leer
    :LOGBOOK:
    CLOCK: [2018-06-06 mer 11:15]--[2018-06-06 mer 11:17] =>  0:02
@@ -314,7 +322,7 @@
    CLOCK: [2018-06-06 mer 11:22]--[2018-06-06 mer 11:28] =>  0:06
    :END:
 
-* http://codeforces.com/problemset/problem/979/C
+* [[http://codeforces.com/problemset/problem/979/C][CF979-D2-C]]
 ** Leer
    :LOGBOOK:
    CLOCK: [2018-06-06 mer 11:30]--[2018-06-06 mer 11:32] =>  0:02
@@ -333,7 +341,7 @@
    CLOCK: [2018-06-06 mer 11:47]--[2018-06-06 mer 11:49] =>  0:02
    :END:
 
-* http://codeforces.com/problemset/problem/455/B
+* [[http://codeforces.com/problemset/problem/455/B][CF455-D1-B]]
 ** Leer
    :LOGBOOK:
    CLOCK: [2018-06-06 mer 11:52]--[2018-06-06 mer 11:54] =>  0:02
@@ -440,8 +448,3 @@
    CLOCK: [2018-06-07 ĵaŭ 13:18]--[2018-06-07 ĵaŭ 13:25] =>  0:07
    :END:
 
-* Documentar
-  :LOGBOOK:
-  CLOCK: [2018-06-07 ĵaŭ 17:48]
-  CLOCK: [2018-06-07 ĵaŭ 17:48]--[2018-06-07 ĵaŭ 17:48] =>  0:00
-  :END:
