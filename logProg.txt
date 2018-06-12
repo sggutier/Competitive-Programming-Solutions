@@ -18,6 +18,7 @@
 
 * Documentar
   :LOGBOOK:
+  CLOCK: [2018-06-12 mar 12:39]
   CLOCK: [2018-06-07 ĵaŭ 20:54]--[2018-06-07 ĵaŭ 21:46] =>  0:52
   CLOCK: [2018-06-07 ĵaŭ 17:48]--[2018-06-07 ĵaŭ 19:26] =>  1:38
   CLOCK: [2018-06-07 ĵaŭ 17:48]--[2018-06-07 ĵaŭ 17:48] =>  0:00
@@ -271,15 +272,27 @@
    :END:
 
 * [[https://www.hackerrank.com/challenges/connect-the-country/problem][HR-connect-the-country]]
+  :LOGBOOK:
+  CLOCK: [2018-06-12 mar 10:31]--[2018-06-12 mar 10:31] =>  0:00
+  :END:
 ** Leer
    :LOGBOOK:
    CLOCK: [2018-06-05 mar 20:41]--[2018-06-05 mar 20:44] =>  0:03
    :END:
 ** Pensar
    :LOGBOOK:
+   CLOCK: [2018-06-12 mar 11:04]--[2018-06-12 mar 11:21] =>  0:17
+   CLOCK: [2018-06-12 mar 10:40]--[2018-06-12 mar 10:54] =>  0:14
+   CLOCK: [2018-06-12 mar 10:32]--[2018-06-12 mar 10:37] =>  0:05
    CLOCK: [2018-06-05 mar 20:44]--[2018-06-05 mar 21:10] =>  0:26
    :END:
-
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-12 mar 11:21]--[2018-06-12 mar 11:23] =>  0:02
+   CLOCK: [2018-06-12 mar 10:55]--[2018-06-12 mar 11:04] =>  0:09
+   CLOCK: [2018-06-12 mar 10:54]--[2018-06-12 mar 10:55] =>  0:01
+   CLOCK: [2018-06-12 mar 10:37]--[2018-06-12 mar 10:40] =>  0:03
+   :END:
 * [[http://codeforces.com/problemset/problem/746/A][CF746-D2-A]]
    :LOGBOOK:
    CLOCK: [2018-06-06 mer 10:59]--[2018-06-06 mer 11:01] =>  0:02
