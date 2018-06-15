@@ -1,24 +1,162 @@
-#+BEGIN: clocktable :maxlevel 2 :scope file :block today
-#+CAPTION: Clock summary at [2018-06-07 ĵaŭ 21:47], for ĵaŭdo, Junio 07, 2018.
-| Headline       | Time |      |
-|----------------+------+------|
-| *Total time*     | *4:07* |      |
-|----------------+------+------|
-| Documentar     | 2:30 |      |
-| [[https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1771][UVa-10830]]      | 0:19 |      |
-| \_  Leer       |      | 0:01 |
-| \_  Pensar     |      | 0:08 |
-| \_  Programar  |      | 0:10 |
-| [[http://codeforces.com/gym/100506/problem/C][CF100506-GYM-C]] | 1:18 |      |
-| \_  Leer       |      | 0:07 |
-| \_  Pensar     |      | 0:39 |
-| \_  Programar  |      | 0:25 |
-| \_  Debugear   |      | 0:07 |
+#+BEGIN: clocktable :maxlevel 2 :scope file
+#+CAPTION: Clock summary at [2018-06-14 ĵaŭ 20:40]
+| Headline                        |     Time |      |
+|---------------------------------+----------+------|
+| *Total time*                      | *1d 10:14* |      |
+|---------------------------------+----------+------|
+| Documentar                      |     2:50 |      |
+| CF86D                           |     0:37 |      |
+| \_  Leer                        |          | 0:02 |
+| \_  Pensar                      |          | 0:35 |
+| CF732D                          |     0:30 |      |
+| \_  Leer                        |          | 0:03 |
+| \_  Pensar                      |          | 0:13 |
+| \_  Programar                   |          | 0:10 |
+| \_  Debuguear                   |          | 0:04 |
+| CF552C                          |     0:40 |      |
+| \_  Leer                        |          | 0:03 |
+| \_  Pensar                      |          | 0:33 |
+| \_  Programar                   |          | 0:04 |
+| CF432D                          |     0:54 |      |
+| \_  Leer                        |          | 0:02 |
+| \_  Pensar                      |          | 0:34 |
+| \_  Programar                   |          | 0:18 |
+| CF489B                          |     0:06 |      |
+| \_  Leer                        |          | 0:01 |
+| \_  Pensar                      |          | 0:02 |
+| \_  Programar                   |          | 0:03 |
+| [[http://codeforces.com/contest/459/problem/B][CF459-D2-B]]                      |     0:05 |      |
+| \_  Leer                        |          | 0:01 |
+| \_  Programar                   |          | 0:03 |
+| \_  Debugeuar                   |          | 0:01 |
+| [[http://codeforces.com/contest/785/problem/A][CF785-D2-A]]                      |     0:03 |      |
+| \_  Leer                        |          | 0:01 |
+| \_  Programar                   |          | 0:02 |
+| [[http://codeforces.com/contest/706/problem/B][CF706-D2-B]]                      |     0:04 |      |
+| \_  Leer                        |          | 0:01 |
+| \_  Programar                   |          | 0:03 |
+| [[http://www.spoj.com/problems/MSE08H/][SPOJ-MSE08H]]                     |     0:44 |      |
+| \_  Leer                        |          | 0:01 |
+| \_  Pensar                      |          | 0:43 |
+| [[http://codeforces.com/contest/129/problem/D][CF129-D2-D]]                      |     2:00 |      |
+| \_  Leer                        |          | 0:02 |
+| \_  Pensar                      |          | 0:38 |
+| \_  Programar                   |          | 0:40 |
+| \_  Debugear                    |          | 0:40 |
+| [[https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=26&page=show_problem&problem=2419][UVa 11424]]                       |     1:03 |      |
+| \_  Leer                        |          | 0:01 |
+| \_  Pensar                      |          | 0:44 |
+| \_  Programar                   |          | 0:18 |
+| [[https://www.hackerrank.com/challenges/billboards/problem][HR-Billboard]]                    |     0:16 |      |
+| \_  Leer                        |          | 0:03 |
+| \_  Pensar                      |          | 0:06 |
+| \_  Programar                   |          | 0:05 |
+| \_  Debugear                    |          | 0:02 |
+| SRM452-D1-500                   |     2:07 |      |
+| \_  Leer                        |          | 0:03 |
+| \_  Pensar                      |          | 1:21 |
+| \_  Programar                   |          | 0:43 |
+| [[https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=16&page=show_problem&problem=4197][UVa 1451]]                        |     6:41 |      |
+| \_  Leer                        |          | 0:03 |
+| \_  Pensar                      |          | 4:17 |
+| \_  Programar                   |          | 2:21 |
+| [[http://codeforces.com/problemset/problem/450/D][CF450-D2-D]]                      |     0:25 |      |
+| \_  Leer                        |          | 0:02 |
+| \_  Pensar                      |          | 0:08 |
+| \_  Programar                   |          | 0:11 |
+| \_  Debugear                    |          | 0:04 |
+| [[http://codeforces.com/problemset/problem/441/C][CF441-D2-C]]                      |     0:19 |      |
+| \_  Leer                        |          | 0:02 |
+| \_  Pensar                      |          | 0:02 |
+| \_  Programar                   |          | 0:06 |
+| \_  Debugear                    |          | 0:09 |
+| [[http://codeforces.com/problemset/problem/677/D][CF677-D2-D]]                      |     1:05 |      |
+| \_  Leer                        |          | 0:02 |
+| \_  Pensar                      |          | 0:55 |
+| \_  Programar                   |          | 0:08 |
+| [[https://www.hackerrank.com/challenges/connect-the-country/problem][HR-connect-the-country]]          |     1:20 |      |
+| \_  Leer                        |          | 0:03 |
+| \_  Pensar                      |          | 1:02 |
+| \_  Programar                   |          | 0:15 |
+| [[http://codeforces.com/problemset/problem/746/A][CF746-D2-A]]                      |     0:02 |      |
+| [[http://codeforces.com/problemset/problem/572/A][CF572-D2-A]]                      |     0:04 |      |
+| \_  Leer                        |          | 0:01 |
+| \_  Programar                   |          | 0:03 |
+| [[http://codeforces.com/problemset/problem/610/A][CF610-D2-A]]                      |     0:04 |      |
+| \_  Pensar                      |          | 0:02 |
+| \_  Programar                   |          | 0:02 |
+| [[http://codeforces.com/problemset/problem/610/B][CF610-D2-B]]                      |     0:12 |      |
+| \_  Leer                        |          | 0:02 |
+| \_  Pensar                      |          | 0:04 |
+| \_  Programar                   |          | 0:06 |
+| [[http://codeforces.com/problemset/problem/979/C][CF979-D2-C]]                      |     0:19 |      |
+| \_  Leer                        |          | 0:02 |
+| \_  Pensar                      |          | 0:04 |
+| \_  Programar                   |          | 0:11 |
+| \_  Debugear                    |          | 0:02 |
+| [[http://codeforces.com/problemset/problem/455/B][CF455-D1-B]]                      |     0:59 |      |
+| \_  Leer                        |          | 0:02 |
+| \_  Pensar                      |          | 0:37 |
+| \_  Programar                   |          | 0:20 |
+| [[http://codeforces.com/problemset/problem/616/D][CF616-D2-D]]                      |     0:09 |      |
+| \_  Leer                        |          | 0:03 |
+| \_  Programar                   |          | 0:06 |
+| [[http://www.spoj.com/problems/MB1/][SPOJ-MB1]]                        |     0:10 |      |
+| \_  Leer                        |          | 0:02 |
+| \_  Programar                   |          | 0:08 |
+| [[http://codeforces.com/problemset/problem/371/D][CF371-D2-D]]                      |     0:26 |      |
+| \_  Leer                        |          | 0:02 |
+| \_  Pensar                      |          | 0:13 |
+| \_  Programar                   |          | 0:11 |
+| [[https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4040][LA-6029]]                         |     1:32 |      |
+| \_  Leer                        |          | 0:01 |
+| \_  Pensar                      |          | 0:19 |
+| \_  Programar                   |          | 0:37 |
+| \_  Debuguear                   |          | 0:35 |
+| [[https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1771][UVa-10830]]                       |     0:19 |      |
+| \_  Leer                        |          | 0:01 |
+| \_  Pensar                      |          | 0:08 |
+| \_  Programar                   |          | 0:10 |
+| [[http://codeforces.com/gym/100506/problem/C][CF100506-GYM-C]]                  |     1:18 |      |
+| \_  Leer                        |          | 0:07 |
+| \_  Pensar                      |          | 0:39 |
+| \_  Programar                   |          | 0:25 |
+| \_  Debugear                    |          | 0:07 |
+| Concurso: Codeforces Round #487 |     3:30 |      |
+| CF279-D2-C                      |     0:08 |      |
+| \_  Leer                        |          | 0:02 |
+| \_  Programar                   |          | 0:06 |
+| CF349-D2-B                      |     0:13 |      |
+| \_  Leer                        |          | 0:02 |
+| \_  Pensar                      |          | 0:01 |
+| \_  Programar                   |          | 0:10 |
+| CF121-D1-C                      |     0:27 |      |
+| \_  Leer                        |          | 0:06 |
+| \_  Programar                   |          | 0:21 |
+| CF359-D2-C                      |     1:09 |      |
+| \_  Leer                        |          | 0:03 |
+| \_  Pensar                      |          | 0:27 |
+| \_  Programar                   |          | 0:23 |
+| \_  Debugear                    |          | 0:16 |
+| CF274-D1-B                      |     0:08 |      |
+| \_  Leer                        |          | 0:04 |
+| \_  Pensar                      |          | 0:04 |
+| CF220-D1-B                      |     0:38 |      |
+| \_  Leer                        |          | 0:01 |
+| \_  Pensar                      |          | 0:37 |
+| Leer temas                      |     0:20 |      |
+| \_  [[http://codeforces.com/blog/entry/47821][Truco de pendiente]]          |          | 0:20 |
+| [[http://codeforces.com/problemset/problem/300/C][CF300-D2-C]]                      |     0:18 |      |
+| \_  Leer                        |          | 0:02 |
+| \_  Pensar                      |          | 0:03 |
+| \_  Programar                   |          | 0:13 |
 #+END:
+
 
 * Documentar
   :LOGBOOK:
-  CLOCK: [2018-06-12 mar 12:39]
+  CLOCK: [2018-06-13 mer 13:45]--[2018-06-13 mer 13:58] =>  0:13
+  CLOCK: [2018-06-12 mar 12:39]--[2018-06-12 mar 12:46] =>  0:07
   CLOCK: [2018-06-07 ĵaŭ 20:54]--[2018-06-07 ĵaŭ 21:46] =>  0:52
   CLOCK: [2018-06-07 ĵaŭ 17:48]--[2018-06-07 ĵaŭ 19:26] =>  1:38
   CLOCK: [2018-06-07 ĵaŭ 17:48]--[2018-06-07 ĵaŭ 17:48] =>  0:00
@@ -199,20 +337,33 @@
    :END:
 ** Pensar
    :LOGBOOK:
+   CLOCK: [2018-06-12 mar 18:52]--[2018-06-12 mar 19:22] =>  0:30
    CLOCK: [2018-06-04 lun 18:02]--[2018-06-04 lun 18:53] =>  0:51
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-12 mar 19:22]--[2018-06-12 mar 20:05] =>  0:43
    :END:
 
 * [[https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=16&page=show_problem&problem=4197][UVa 1451]]
 ** Leer
    :LOGBOOK:
+   CLOCK: [2018-06-14 ĵaŭ 19:38]--[2018-06-14 ĵaŭ 19:38] =>  0:00
    CLOCK: [2018-06-04 lun 18:54]--[2018-06-04 lun 18:57] =>  0:03
    :END:
 ** Pensar
    :LOGBOOK:
+   CLOCK: [2018-06-14 ĵaŭ 19:38]--[2018-06-14 ĵaŭ 20:20] =>  0:42
+   CLOCK: [2018-06-14 ĵaŭ 17:38]--[2018-06-14 ĵaŭ 18:42] =>  1:04
+   CLOCK: [2018-06-13 mer 22:13]--[2018-06-13 mer 23:00] =>  0:47
+   CLOCK: [2018-06-13 mer 21:43]--[2018-06-13 mer 22:13] =>  0:30
+   CLOCK: [2018-06-13 mer 19:11]--[2018-06-13 mer 19:41] =>  0:30
    CLOCK: [2018-06-04 lun 18:57]--[2018-06-04 lun 19:41] =>  0:44
    :END:
 ** Programar
    :LOGBOOK:
+   CLOCK: [2018-06-14 ĵaŭ 20:20]--[2018-06-14 ĵaŭ 20:39] =>  0:19
+   CLOCK: [2018-06-14 ĵaŭ 18:43]--[2018-06-14 ĵaŭ 19:19] =>  0:36
    CLOCK: [2018-06-04 lun 22:54]--[2018-06-04 lun 22:59] =>  0:05
    CLOCK: [2018-06-04 lun 21:56]--[2018-06-04 lun 22:46] =>  0:50
    CLOCK: [2018-06-04 lun 21:43]--[2018-06-04 lun 21:56] =>  0:13
@@ -461,3 +612,113 @@
    CLOCK: [2018-06-07 ĵaŭ 13:18]--[2018-06-07 ĵaŭ 13:25] =>  0:07
    :END:
 
+
+* Concurso: Codeforces Round #487
+  :LOGBOOK:
+  CLOCK: [2018-06-11 lun 9:30]--[2018-06-11 lun 13:00] =>  3:30
+  :END:
+
+* CF279-D2-C
+** Leer 
+   :LOGBOOK:
+   CLOCK: [2018-06-12 mar 20:08]--[2018-06-12 mar 20:10] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-12 mar 20:10]--[2018-06-12 mar 20:10] =>  0:00
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-12 mar 20:10]--[2018-06-12 mar 20:16] =>  0:06
+   :END:
+
+* CF349-D2-B
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-12 mar 20:17]--[2018-06-12 mar 20:19] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-12 mar 20:19]--[2018-06-12 mar 20:20] =>  0:01
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-12 mar 20:20]--[2018-06-12 mar 20:30] =>  0:10
+   :END:
+
+* CF121-D1-C
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-12 mar 20:32]--[2018-06-12 mar 20:38] =>  0:06
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-12 mar 20:43]--[2018-06-12 mar 21:04] =>  0:21
+   :END:
+
+* CF359-D2-C
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-13 mer 13:58]--[2018-06-13 mer 14:01] =>  0:03
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-13 mer 14:01]--[2018-06-13 mer 14:28] =>  0:27
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-13 mer 14:28]--[2018-06-13 mer 14:51] =>  0:23
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-13 mer 15:05]--[2018-06-13 mer 15:12] =>  0:07
+   CLOCK: [2018-06-13 mer 15:01]--[2018-06-13 mer 15:04] =>  0:03
+   CLOCK: [2018-06-13 mer 14:53]--[2018-06-13 mer 14:59] =>  0:06
+   :END:
+
+* CF274-D1-B
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-13 mer 17:31]--[2018-06-13 mer 17:35] =>  0:04
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-13 mer 17:35]--[2018-06-13 mer 17:39] =>  0:04
+   :END:
+
+* CF220-D1-B
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-13 mer 17:40]--[2018-06-13 mer 17:41] =>  0:01
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-13 mer 17:44]--[2018-06-13 mer 18:19] =>  0:35
+   CLOCK: [2018-06-13 mer 17:41]--[2018-06-13 mer 17:43] =>  0:02
+   :END:
+
+* Leer temas
+** [[http://codeforces.com/blog/entry/47821][Truco de pendiente]]
+   :LOGBOOK:
+   CLOCK: [2018-06-13 mer 19:55]--[2018-06-13 mer 20:05] =>  0:10
+   CLOCK: [2018-06-13 mer 19:45]--[2018-06-13 mer 19:55] =>  0:10
+   :END:
+
+* [[http://codeforces.com/problemset/problem/300/C][CF300-D2-C]]
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-13 mer 23:02]--[2018-06-13 mer 23:04] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-13 mer 23:04]--[2018-06-13 mer 23:07] =>  0:03
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-13 mer 23:16]--[2018-06-13 mer 23:21] =>  0:05
+   CLOCK: [2018-06-13 mer 23:07]--[2018-06-13 mer 23:15] =>  0:08
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-13 mer 23:16]--[2018-06-13 mer 23:16] =>  0:00
+   :END:
