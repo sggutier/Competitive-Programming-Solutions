@@ -1,17 +1,53 @@
-#+BEGIN: clocktable :maxlevel 2 :scope file :block today
-#+CAPTION: Clock summary at [2018-06-14 ĵaŭ 23:17], for ĵaŭdo, Junio 14, 2018.
-| Headline      | Time |      |
-|---------------+------+------|
-| *Total time*    | *3:33* |      |
-|---------------+------+------|
-| [[https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=16&page=show_problem&problem=4197][UVa 1451]]      | 2:41 |      |
-| \_  Pensar    |      | 1:46 |
-| \_  Programar |      | 0:55 |
-| CF319-D2-B    | 0:52 |      |
-| \_  Leer      |      | 0:01 |
-| \_  Pensar    |      | 0:13 |
-| \_  Programar |      | 0:33 |
-| \_  Debugear  |      | 0:05 |
+#+BEGIN: clocktable :maxlevel 2 :scope file :block thisweek
+#+CAPTION: Clock summary at [2018-06-15 ven 21:55], for week 2018-W24.
+| Headline                          |  Time |      |
+|-----------------------------------+-------+------|
+| *Total time*                        | *19:35* |      |
+|-----------------------------------+-------+------|
+| Documentar                        |  0:20 |      |
+| SRM452-D1-500                     |  1:13 |      |
+| \_  Pensar                        |       | 0:30 |
+| \_  Programar                     |       | 0:43 |
+| [[https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=16&page=show_problem&problem=4197][UVa 1451]]                          |  4:28 |      |
+| \_  Pensar                        |       | 3:33 |
+| \_  Programar                     |       | 0:55 |
+| [[https://www.hackerrank.com/challenges/connect-the-country/problem][HR-connect-the-country]]            |  0:51 |      |
+| \_  Pensar                        |       | 0:36 |
+| \_  Programar                     |       | 0:15 |
+| Concurso: Codeforces Round #487   |  3:30 |      |
+| CF279-D2-C                        |  0:08 |      |
+| \_  Leer                          |       | 0:02 |
+| \_  Programar                     |       | 0:06 |
+| CF349-D2-B                        |  0:13 |      |
+| \_  Leer                          |       | 0:02 |
+| \_  Pensar                        |       | 0:01 |
+| \_  Programar                     |       | 0:10 |
+| CF121-D1-C                        |  0:27 |      |
+| \_  Leer                          |       | 0:06 |
+| \_  Programar                     |       | 0:21 |
+| CF359-D2-C                        |  1:09 |      |
+| \_  Leer                          |       | 0:03 |
+| \_  Pensar                        |       | 0:27 |
+| \_  Programar                     |       | 0:23 |
+| \_  Debugear                      |       | 0:16 |
+| CF274-D1-B                        |  0:08 |      |
+| \_  Leer                          |       | 0:04 |
+| \_  Pensar                        |       | 0:04 |
+| CF220-D1-B                        |  0:38 |      |
+| \_  Leer                          |       | 0:01 |
+| \_  Pensar                        |       | 0:37 |
+| Leer temas                        |  0:20 |      |
+| \_  [[http://codeforces.com/blog/entry/47821][Truco de pendiente]]            |       | 0:20 |
+| [[http://codeforces.com/problemset/problem/300/C][CF300-D2-C]]                        |  0:18 |      |
+| \_  Leer                          |       | 0:02 |
+| \_  Pensar                        |       | 0:03 |
+| \_  Programar                     |       | 0:13 |
+| CF319-D2-B                        |  0:52 |      |
+| \_  Leer                          |       | 0:01 |
+| \_  Pensar                        |       | 0:13 |
+| \_  Programar                     |       | 0:33 |
+| \_  Debugear                      |       | 0:05 |
+| Concurso: Gym CF Northwester 2012 |  5:00 |      |
 #+END:
 
 
@@ -602,3 +638,8 @@
    :LOGBOOK:
    CLOCK: [2018-06-14 ĵaŭ 23:10]--[2018-06-14 ĵaŭ 23:15] =>  0:05
    :END:
+
+* Concurso: Gym CF Northwester 2012
+  :LOGBOOK:
+  CLOCK: [2018-06-15 ven 09:00]--[2018-06-15 ven 14:00] =>  5:00
+  :END:
