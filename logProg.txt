@@ -1,53 +1,12 @@
 #+BEGIN: clocktable :maxlevel 2 :scope file :block thisweek
-#+CAPTION: Clock summary at [2018-06-15 ven 21:55], for week 2018-W24.
-| Headline                          |  Time |      |
-|-----------------------------------+-------+------|
-| *Total time*                        | *19:35* |      |
-|-----------------------------------+-------+------|
-| Documentar                        |  0:20 |      |
-| SRM452-D1-500                     |  1:13 |      |
-| \_  Pensar                        |       | 0:30 |
-| \_  Programar                     |       | 0:43 |
-| [[https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=16&page=show_problem&problem=4197][UVa 1451]]                          |  4:28 |      |
-| \_  Pensar                        |       | 3:33 |
-| \_  Programar                     |       | 0:55 |
-| [[https://www.hackerrank.com/challenges/connect-the-country/problem][HR-connect-the-country]]            |  0:51 |      |
-| \_  Pensar                        |       | 0:36 |
-| \_  Programar                     |       | 0:15 |
-| Concurso: Codeforces Round #487   |  3:30 |      |
-| CF279-D2-C                        |  0:08 |      |
-| \_  Leer                          |       | 0:02 |
-| \_  Programar                     |       | 0:06 |
-| CF349-D2-B                        |  0:13 |      |
-| \_  Leer                          |       | 0:02 |
-| \_  Pensar                        |       | 0:01 |
-| \_  Programar                     |       | 0:10 |
-| CF121-D1-C                        |  0:27 |      |
-| \_  Leer                          |       | 0:06 |
-| \_  Programar                     |       | 0:21 |
-| CF359-D2-C                        |  1:09 |      |
-| \_  Leer                          |       | 0:03 |
-| \_  Pensar                        |       | 0:27 |
-| \_  Programar                     |       | 0:23 |
-| \_  Debugear                      |       | 0:16 |
-| CF274-D1-B                        |  0:08 |      |
-| \_  Leer                          |       | 0:04 |
-| \_  Pensar                        |       | 0:04 |
-| CF220-D1-B                        |  0:38 |      |
-| \_  Leer                          |       | 0:01 |
-| \_  Pensar                        |       | 0:37 |
-| Leer temas                        |  0:20 |      |
-| \_  [[http://codeforces.com/blog/entry/47821][Truco de pendiente]]            |       | 0:20 |
-| [[http://codeforces.com/problemset/problem/300/C][CF300-D2-C]]                        |  0:18 |      |
-| \_  Leer                          |       | 0:02 |
-| \_  Pensar                        |       | 0:03 |
-| \_  Programar                     |       | 0:13 |
-| CF319-D2-B                        |  0:52 |      |
-| \_  Leer                          |       | 0:01 |
-| \_  Pensar                        |       | 0:13 |
-| \_  Programar                     |       | 0:33 |
-| \_  Debugear                      |       | 0:05 |
-| Concurso: Gym CF Northwester 2012 |  5:00 |      |
+#+CAPTION: Clock summary at [2018-06-18 lun 18:55], for week 2018-W25.
+| Headline           | Time |      |
+|--------------------+------+------|
+| *Total time*         | *5:35* |      |
+|--------------------+------+------|
+| [[http://www.spoj.com/problems/MSE08H/][SPOJ-MSE08H]]        | 3:05 |      |
+| \_  Pensar         |      | 3:05 |
+| Concurso: CF992-D2 | 2:30 |      |
 #+END:
 
 
@@ -168,9 +127,17 @@
    :END:
 ** Pensar
    :LOGBOOK:
+   CLOCK: [2018-06-19 mar 17:31]--[2018-06-19 mar 18:01] =>  0:30
+   CLOCK: [2018-06-19 mar 16:55]--[2018-06-19 mar 17:14] =>  0:19
+   CLOCK: [2018-06-18 lun 15:50]--[2018-06-18 lun 18:55] =>  3:05
    CLOCK: [2018-05-31 ĵaŭ 16:58]--[2018-05-31 ĵaŭ 17:02] =>  0:04
    CLOCK: [2018-05-31 ĵaŭ 16:19]--[2018-05-31 ĵaŭ 16:58] =>  0:39
    :END:
+* Programar
+  :LOGBOOK:
+  CLOCK: [2018-06-19 mar 18:01]--[2018-06-19 mar 18:14] =>  0:00
+  :END:
+
 
 * [[http://codeforces.com/contest/129/problem/D][CF129-D2-D]]
 ** Leer
@@ -642,4 +609,9 @@
 * Concurso: Gym CF Northwester 2012
   :LOGBOOK:
   CLOCK: [2018-06-15 ven 09:00]--[2018-06-15 ven 14:00] =>  5:00
+  :END:
+
+* Concurso: CF992-D2
+  :LOGBOOK:
+  CLOCK: [2018-06-18 lun 11:30]--[2018-06-18 lun 14:00] =>  2:30
   :END:
