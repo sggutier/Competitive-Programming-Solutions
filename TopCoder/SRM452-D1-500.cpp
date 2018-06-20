@@ -1,71 +1,62 @@
+// - The solution is like in the tutorial: https://apps.topcoder.com/wiki/display/tc/SRM+452
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-const int limN = 5005;
-const int lim2 = limN*limN;
-const int lim4 = lim2*4;
+const int limN = 2505;
 const int mod = 1e9 + 7;
 
-vector <int> adj[2*lim4];
-
-inline int neg(const int k) {
-    return k + lim4;
-}
-
-inline int anum(const int i, const int j, const int t) {
-    return t*lim2 + i*limN + j ;
-}
+int N, unoCnt = 0 ;
+int dp[limN][limN];
 
 class IOIString {
 public:
 	int countIOIs(vector <string> mask) {
-    	string str ;
-        ll pot2 = 1;
-        int N ;
+    	string str = "" ;
+        int pot2 = 1;
         for(const string &s : mask) {
             str += s;
-            for(char c : s) {
-                if(c != '?') continue;
-                pot2 = (pot2 * 2) % mod;
-            }
         }
         N = str.size();
+        vector <int> sums(N, 0);
+        int first1 = N;
         for(int i=0; i<N; i++) {
-            for(int j=i+1, k=i+2; k<N; j++, k++) {
-                if(str[i] == 'I' && str[j] == 'O' && str[k] == 'I')
-                    return pot2;
+            if(str[i]=='?')
+                pot2 = (pot2*2) % mod;
+            else if(str[i]=='I') {
+                first1 = min(first1, i);
+                sums[i] = 1;
             }
+            if(i)
+                sums[i] += sums[i-1];
         }
-        for(int i=0; i<N; i++) {
-            adj[anum(i, i, 0)].push_back(neg(anum(i, i, 0)));
-            adj[neg(anum(i, i, 0))].push_back(anum(i, i, 0));
-            for(int j=i+1; j<N; j++) {
-                // I?
-                adj[anum(i, i, 0)].push_back(neg(anum(i, j, 0)));
-                adj[anum(i, i, 0)].push_back(neg(anum(i, j, 1)));
-                // O?
-                adj[neg(anum(i, i, 0))].push_back(neg(anum(i, j, 2)));
-                adj[neg(anum(i, i, 0))].push_back(neg(anum(i, j, 3)));
-                // ?I
-                adj[anum(j, j, 0)].push_back(neg(anum(i, j, 0)));
-                adj[anum(j, j, 0)].push_back(neg(anum(i, j, 2)));
-                // ?O
-                adj[neg(anum(j, j, 0))].push_back(neg(anum(i, j, 1)));
-                adj[neg(anum(j, j, 0))].push_back(neg(anum(i, j, 3)));
-                // OO
-                adj[anum(i, j, 0)].push_back(neg(anum(i, i, 0)));
-                adj[anum(i, j, 0)].push_back(neg(anum(j, j, 0)));
-                // OI
-                adj[anum(i, j, 1)].push_back(neg(anum(i, i, 0)));
-                adj[anum(i, j, 1)].push_back(anum(j, j, 0));
-                // IO
-                adj[anum(i, j, 2)].push_back(anum(i, i, 0));
-                adj[anum(i, j, 2)].push_back(neg(anum(j, j, 0)));
-                // II
-                adj[anum(i, j, 3)].push_back(anum(i, i, 0));
-                adj[anum(i, j, 3)].push_back(anum(j, j, 0));
+        
+        int ans = first1==N? 1 : 0;
+        for(int i=N-1; i>=0; i--) {
+            if(str[i] == 'O')
+                continue;
+            for(int d=1; d+i < N; d+=2) {
+                if(sums[i+d] - sums[i] > 0) {
+                    if(str[i+d] == 'I' && sums[i+d] - sums[i] == 1)
+                        dp[i][d] = (dp[i][d] + dp[i + d][d]) % mod;
+                    break;
+                }
+                dp[i][d] = (dp[i][d] + dp[i + d][d]) % mod;
             }
+            if(i <= first1) {
+                if(unoCnt == 0)
+                    ans = (ans + 1) % mod;
+                for(int d=1; i + d < N; d += 2)
+                    ans = (ans + dp[i][d]) % mod;
+            }
+            if(unoCnt == 0)
+                for(int d=1; d < N; d+=2)
+                    dp[i][d] = (dp[i][d] + 1) % mod;
+            if(str[i]=='I')
+                unoCnt++;
         }
+        // printf("pot2 is %d\n", pot2);
+        // printf("ans is %d\n", ans);
+        return (pot2 + (mod - ans)%mod) % mod;
 	}
 };
 

@@ -1,12 +1,42 @@
 #+BEGIN: clocktable :maxlevel 2 :scope file :block thisweek
-#+CAPTION: Clock summary at [2018-06-18 lun 18:55], for week 2018-W25.
-| Headline           | Time |      |
-|--------------------+------+------|
-| *Total time*         | *5:35* |      |
-|--------------------+------+------|
-| [[http://www.spoj.com/problems/MSE08H/][SPOJ-MSE08H]]        | 3:05 |      |
-| \_  Pensar         |      | 3:05 |
-| Concurso: CF992-D2 | 2:30 |      |
+#+CAPTION: Clock summary at [2018-06-20 mer 13:30], for week 2018-W25.
+| Headline           |  Time |      |
+|--------------------+-------+------|
+| *Total time*         | *11:19* |      |
+|--------------------+-------+------|
+| [[http://www.spoj.com/problems/MSE08H/][SPOJ-MSE08H]]        |  4:07 |      |
+| \_  Pensar         |       | 3:54 |
+| \_  Programar      |       | 0:13 |
+| SRM452-D1-500      |  2:01 |      |
+| \_  Pensar         |       | 0:59 |
+| \_  Programar      |       | 0:30 |
+| \_  Debugear       |       | 0:32 |
+| Concurso: CF992-D2 |  2:30 |      |
+| CF101656-GYM-K     |  0:26 |      |
+| CF465-D2-A         |  0:03 |      |
+| \_  Leer           |       | 0:01 |
+| \_  Programar      |       | 0:02 |
+| CF463-D2-B         |  0:07 |      |
+| \_  Leer           |       | 0:03 |
+| \_  Programar      |       | 0:04 |
+| CF453-D1-A         |  0:08 |      |
+| \_  Leer           |       | 0:02 |
+| \_  Pensar         |       | 0:03 |
+| \_  Programar      |       | 0:03 |
+| CF543-D1-A         |  0:11 |      |
+| \_  Leer           |       | 0:04 |
+| \_  Pensar         |       | 0:03 |
+| \_  Programar      |       | 0:04 |
+| CF496-D2-D         |  0:23 |      |
+| \_  Leer           |       | 0:05 |
+| \_  Pensar         |       | 0:05 |
+| \_  Programar      |       | 0:11 |
+| \_  Debugear       |       | 0:02 |
+| CF519-D2-E         |  1:23 |      |
+| \_  Leer           |       | 0:03 |
+| \_  Pensar         |       | 0:14 |
+| \_  Programar      |       | 0:57 |
+| \_  Debugear       |       | 0:09 |
 #+END:
 
 
@@ -133,7 +163,7 @@
    CLOCK: [2018-05-31 ĵaŭ 16:58]--[2018-05-31 ĵaŭ 17:02] =>  0:04
    CLOCK: [2018-05-31 ĵaŭ 16:19]--[2018-05-31 ĵaŭ 16:58] =>  0:39
    :END:
-* Programar
+** Programar
   :LOGBOOK:
   CLOCK: [2018-06-19 mar 18:01]--[2018-06-19 mar 18:14] =>  0:00
   :END:
@@ -202,12 +232,20 @@
    :END:
 ** Pensar
    :LOGBOOK:
+   CLOCK: [2018-06-20 mer 12:13]--[2018-06-20 mer 12:28] =>  0:15
+   CLOCK: [2018-06-20 mer 11:27]--[2018-06-20 mer 12:11] =>  0:44
    CLOCK: [2018-06-12 mar 18:52]--[2018-06-12 mar 19:22] =>  0:30
    CLOCK: [2018-06-04 lun 18:02]--[2018-06-04 lun 18:53] =>  0:51
    :END:
 ** Programar
    :LOGBOOK:
+   CLOCK: [2018-06-20 mer 12:28]--[2018-06-20 mer 12:58] =>  0:30
    CLOCK: [2018-06-12 mar 19:22]--[2018-06-12 mar 20:05] =>  0:43
+   :END:
+
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-20 mer 12:58]--[2018-06-20 mer 13:30] =>  0:32
    :END:
 
 * [[https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=16&page=show_problem&problem=4197][UVa 1451]]
@@ -615,3 +653,93 @@
   :LOGBOOK:
   CLOCK: [2018-06-18 lun 11:30]--[2018-06-18 lun 14:00] =>  2:30
   :END:
+
+* CF101656-GYM-K
+  :LOGBOOK:
+  CLOCK: [2018-06-19 mar 19:30]--[2018-06-19 mar 19:56] =>  0:26
+  :END:
+
+* CF465-D2-A
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 20:05]--[2018-06-19 mar 20:06] =>  0:01
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 20:06]--[2018-06-19 mar 20:08] =>  0:02
+   :END:
+
+* CF463-D2-B
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 20:09]--[2018-06-19 mar 20:12] =>  0:03
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 20:12]--[2018-06-19 mar 20:16] =>  0:04
+   :END:
+
+* CF453-D1-A
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 20:17]--[2018-06-19 mar 20:19] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 20:19]--[2018-06-19 mar 20:22] =>  0:03
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 20:23]--[2018-06-19 mar 20:26] =>  0:03
+   :END:
+
+* CF543-D1-A
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 20:30]--[2018-06-19 mar 20:34] =>  0:04
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 20:34]--[2018-06-19 mar 20:37] =>  0:03
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 20:37]--[2018-06-19 mar 20:41] =>  0:04
+   :END:
+
+* CF496-D2-D
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 20:44]--[2018-06-19 mar 20:49] =>  0:05
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 20:49]--[2018-06-19 mar 20:54] =>  0:05
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 20:54]--[2018-06-19 mar 21:05] =>  0:11
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 21:08]--[2018-06-19 mar 21:10] =>  0:02
+   :END:
+
+* CF519-D2-E
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 22:11]--[2018-06-19 mar 22:14] =>  0:03
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 22:14]--[2018-06-19 mar 22:28] =>  0:14
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 23:24]--[2018-06-19 mar 23:36] =>  0:12
+   CLOCK: [2018-06-19 mar 22:28]--[2018-06-19 mar 23:13] =>  0:45
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-19 mar 23:13]--[2018-06-19 mar 23:22] =>  0:09
+   :END:
