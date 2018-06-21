@@ -1,9 +1,10 @@
 #+BEGIN: clocktable :maxlevel 2 :scope file :block thisweek
-#+CAPTION: Clock summary at [2018-06-20 mer 13:30], for week 2018-W25.
+#+CAPTION: Clock summary at [2018-06-20 mer 13:55], for week 2018-W25.
 | Headline           |  Time |      |
 |--------------------+-------+------|
-| *Total time*         | *11:19* |      |
+| *Total time*         | *11:43* |      |
 |--------------------+-------+------|
+| Documentar         |  0:24 |      |
 | [[http://www.spoj.com/problems/MSE08H/][SPOJ-MSE08H]]        |  4:07 |      |
 | \_  Pensar         |       | 3:54 |
 | \_  Programar      |       | 0:13 |
@@ -42,6 +43,8 @@
 
 * Documentar
   :LOGBOOK:
+  CLOCK: [2018-06-20 mer 13:30]--[2018-06-20 mer 13:54] =>  0:24
+  CLOCK: [2018-06-20 mer 13:54]--[2018-06-20 mer 13:54] =>  0:00
   CLOCK: [2018-06-13 mer 13:45]--[2018-06-13 mer 13:58] =>  0:13
   CLOCK: [2018-06-12 mar 12:39]--[2018-06-12 mar 12:46] =>  0:07
   CLOCK: [2018-06-07 ĵaŭ 20:54]--[2018-06-07 ĵaŭ 21:46] =>  0:52
@@ -742,4 +745,23 @@
 ** Debugear
    :LOGBOOK:
    CLOCK: [2018-06-19 mar 23:13]--[2018-06-19 mar 23:22] =>  0:09
+   :END:
+
+* CF100283-Gym-C
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-20 mer 18:52]--[2018-06-20 mer 18:59] =>  0:07
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-20 mer 18:59]--[2018-06-20 mer 19:26] =>  0:27
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-20 mer 19:26]--[2018-06-20 mer 19:48] =>  0:22
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-20 mer 19:55]--[2018-06-20 mer 20:08] =>  0:13
+   CLOCK: [2018-06-20 mer 19:50]--[2018-06-20 mer 19:54] =>  0:04
    :END:
