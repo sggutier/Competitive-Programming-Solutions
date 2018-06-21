@@ -1,3 +1,4 @@
+// - More or less like the tutorial in http://codeforces.com/blog/entry/9571
 #include <bits/stdc++.h>
 using namespace std;
 const int limN = 205;
