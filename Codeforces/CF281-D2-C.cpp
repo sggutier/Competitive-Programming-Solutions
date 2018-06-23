@@ -1,3 +1,13 @@
+// - There are two cases: the non-intersections form either four triangles or two trapeziums.
+// - If the trapeziums case happens, the intersection area is a parallelogram. The
+//   intersections are calculated and so the base of the parallelogram.  Then multiply by
+//   its height.
+// - In the case of the four triangles, notice the two similar triangles like in the example
+//   pic.  Calculate the top intersection point of the two rectangles, then the basis of
+//   the intersection triangle is the distance between that point and the upper left corner 
+//   of the original rectangle.  The height can be calculated using trigonometry. 
+//   The small intersection triangle is calculated similarly.  Then the areas of the four are
+//   added.
 #include <bits/stdc++.h>
 using namespace std;
 #define rep(i, a, b) for(int i = a; i < (b); ++i)
