@@ -1,8 +1,8 @@
 #+BEGIN: clocktable :maxlevel 2 :scope file :block thisweek
-#+CAPTION: Clock summary at [2018-06-20 mer 13:55], for week 2018-W25.
+#+CAPTION: Clock summary at [2018-06-22 ven 18:59], for week 2018-W25.
 | Headline           |  Time |      |
 |--------------------+-------+------|
-| *Total time*         | *11:43* |      |
+| *Total time*         | *16:49* |      |
 |--------------------+-------+------|
 | Documentar         |  0:24 |      |
 | [[http://www.spoj.com/problems/MSE08H/][SPOJ-MSE08H]]        |  4:07 |      |
@@ -38,11 +38,32 @@
 | \_  Pensar         |       | 0:14 |
 | \_  Programar      |       | 0:57 |
 | \_  Debugear       |       | 0:09 |
+| CF100283-Gym-C     |  1:13 |      |
+| \_  Leer           |       | 0:07 |
+| \_  Pensar         |       | 0:27 |
+| \_  Programar      |       | 0:22 |
+| \_  Debugear       |       | 0:17 |
+| CF459-D2-C         |  0:59 |      |
+| \_  Leer           |       | 0:02 |
+| \_  Pensar         |       | 0:37 |
+| \_  Programar      |       | 0:18 |
+| \_  Debugear       |       | 0:02 |
+| Conco              |  1:39 |      |
+| CF442-D1-B         |  0:30 |      |
+| \_  Leer           |       | 0:01 |
+| \_  Programar      |       | 0:07 |
+| \_  Pensar         |       | 0:22 |
+| HR-meeting-point   |  0:45 |      |
+| \_  Leer           |       | 0:03 |
+| \_  Pensar         |       | 0:16 |
+| \_  Programar      |       | 0:13 |
+| \_  Debugear       |       | 0:13 |
 #+END:
 
 
 * Documentar
   :LOGBOOK:
+  CLOCK: [2018-06-22 ven 18:53]
   CLOCK: [2018-06-20 mer 13:30]--[2018-06-20 mer 13:54] =>  0:24
   CLOCK: [2018-06-20 mer 13:54]--[2018-06-20 mer 13:54] =>  0:00
   CLOCK: [2018-06-13 mer 13:45]--[2018-06-13 mer 13:58] =>  0:13
@@ -764,4 +785,65 @@
    :LOGBOOK:
    CLOCK: [2018-06-20 mer 19:55]--[2018-06-20 mer 20:08] =>  0:13
    CLOCK: [2018-06-20 mer 19:50]--[2018-06-20 mer 19:54] =>  0:04
+   :END:
+
+* CF459-D2-C
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-20 mer 22:13]--[2018-06-20 mer 22:15] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-20 mer 22:53]--[2018-06-20 mer 23:05] =>  0:12
+   CLOCK: [2018-06-20 mer 22:34]--[2018-06-20 mer 22:46] =>  0:12
+   CLOCK: [2018-06-20 mer 22:15]--[2018-06-20 mer 22:28] =>  0:13
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-20 mer 23:07]--[2018-06-20 mer 23:15] =>  0:08
+   CLOCK: [2018-06-20 mer 22:46]--[2018-06-20 mer 22:50] =>  0:04
+   CLOCK: [2018-06-20 mer 22:28]--[2018-06-20 mer 22:34] =>  0:06
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-20 mer 22:51]--[2018-06-20 mer 22:53] =>  0:02
+   :END:
+
+* Conco
+  :LOGBOOK:
+  CLOCK: [2018-06-21 ĵaŭ 09:36]--[2018-06-21 ĵaŭ 11:15] =>  1:39
+  :END:
+
+* CF442-D1-B
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-22 ven 12:58]--[2018-06-22 ven 12:59] =>  0:01
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-22 ven 13:06]--[2018-06-22 ven 13:07] =>  0:01
+   CLOCK: [2018-06-22 ven 12:59]--[2018-06-22 ven 13:05] =>  0:06
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-22 ven 13:07]--[2018-06-22 ven 13:28] =>  0:21
+   CLOCK: [2018-06-22 ven 13:05]--[2018-06-22 ven 13:06] =>  0:01
+   :END:
+
+* HR-meeting-point
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-22 ven 18:03]--[2018-06-22 ven 18:06] =>  0:03
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-22 ven 18:06]--[2018-06-22 ven 18:22] =>  0:16
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-22 ven 18:23]--[2018-06-22 ven 18:36] =>  0:13
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-22 ven 18:36]--[2018-06-22 ven 18:49] =>  0:13
    :END:
