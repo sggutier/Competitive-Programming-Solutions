@@ -1,150 +1,98 @@
-#include <bits/stdc++.h>
+#include <cstdio>
+#include <algorithm>
+#include <cstring>
 using namespace std;
-typedef long long ll;
-const int limN = 50000;
-// const int H = (1<<16);
-const int H = 250005;
 
-struct STree {
-    int cnt = 0;
-    STree *l = NULL, *r = NULL;
-    void insert(const int p) {
-        int l = 1;
-        int r = limN-1;
-        STree *t = this;
-        int mt;
-        while(true) {
-            t->cnt ++;
-            if(l==r)
-                break;
-            mt = (l+r) / 2;
-            if(p <= mt) {
-                if(t->l == NULL)
-                    t->l = new STree();
-                r = mt;
-                t = t->l;
-            }
-            else {
-                if(t->r == NULL)
-                    t->r = new STree();
-                l = mt+1;
-                t = t->r;
-            }
-        }
+typedef long long ll;
+const int bs = 1000;
+const int limN = 250000 ;
+// const int H = (1<<16);
+const int H = 50000;
+
+inline int scan(){
+	int x = 0;
+	char c = getchar_unlocked();
+	while(c < '0' || c > '9'){
+		c = getchar_unlocked();
+	}
+	while(c >= '0' && c <= '9'){
+		x = (x << 3) + (x << 1) + c - '0';
+		c = getchar_unlocked();
+	}
+	return x;
+}
+
+struct BIT {
+    int arr[H+5];
+    BIT() {
+        memset(arr, 0, sizeof(arr));
     }
-    // void erase(const int p)  {
-    //     int l = 1;
-    //     int r = limN-1;
-    //     STree *t = this;
-    //     int mt;
-    //     while(true) {
-    //         t->cnt --;
-    //         if(l==r)
-    //             break;
-    //         mt = (l+r) / 2;
-    //         if(p <= mt) {
-    //             r = mt;
-    //             t = t->l;
-    //         }
-    //         else {
-    //             l = mt+1;
-    //             t = t->r;
-    //         }
-    //     }
-    // }
-    
-    void erase(const int p, const int xl = 1, const int xr = limN-1) {
-        cnt --;
-        if(xl == xr)
-            return;
-        int mt = (xl + xr) / 2;
-        if(p <= mt) {
-            l->erase(p, xl, mt);
-            if(l->cnt == 0) {
-                delete l;
-                l = NULL;
-            }
-        }
-        else {
-            r->erase(p, mt+1, xr);
-            if(r->cnt == 0) {
-                delete r;
-                r = NULL;
-            }
-        }
+    void mete(int pos, int nov) {
+        for(; pos<=H; pos+=(pos & -pos))
+            arr[pos] += nov;
     }
-    int order_of_key(const int p) {
-        int l = 1;
-        int r = limN-1;
-        STree *t = this;
-        int mt;
+    int cnt(int pos) {
         int ans = 0;
-        while(l < r) {
-            mt = (l+r) / 2;
-            if(p <= mt) {
-                if(t->l == NULL)
-                    break;
-                r = mt;
-                t = t->l;
-            }
-            else {                
-                if(t->l)
-                    ans += t->l->cnt ;
-                if(t->r == NULL)
-                    break;
-                l = mt+1;
-                t = t->r;
-            }
-        }
+        for(; pos>0; pos-=(pos & -pos))
+            ans += arr[pos];
         return ans;
     }
 };
 
-STree ords[H*2 + 5];
+BIT bts[250 + 5];
+int arr[limN + 5];
+int mods[limN + 5];
 
 void mete(int x, int y) {
-    for(y += H; y; y>>=1)
-        ords[y].insert(x);
+    x--;
+    bts[x/bs].mete(y, 1);
 }
 
 void saca(int x, int y) {
-    for(y += H; y; y>>=1)
-        ords[y].erase(x);
+    x--;
+    bts[x/bs].mete(y, -1);
 }
 
-int cuenta(int xl, int xr, int yl, int yr) {
-    if(xr < xl || yr < yl)
-        return 0;
+int cuenta(int xl, int xr, int y) {
     int ans = 0;
-    for(yl += H, yr += H+1; yl<yr; yl>>=1, yr>>=1) {
-        if(yl & 1) {
-            ans += ords[yl].order_of_key(xr+1) - ords[yl].order_of_key(xl) ;
-            yl ++;
-        }
-        if(yr & 1) {
-            yr --;
-            ans += ords[yr].order_of_key(xr+1) - ords[yr].order_of_key(xl) ;
-        }
+    for(; xl<=xr && mods[xl] != 1; xl++)
+        if(arr[xl] <= y)
+            ans ++;
+    for(; xl<=xr && mods[xr]; xr--)
+        if(arr[xr] <= y)
+            ans ++;
+    if(xl <= xr) {        
+        for(int pl=(xl-1)/bs, pr=(xr-1)/bs; pl<=pr; pl++)
+            ans += bts[pl].cnt(y);
     }
     return ans;
 }
 
 int main() {
     int N ;
-    int arr[250005];
     int Q ;
     ll ans = 0;
+    BIT bt;
 
-    scanf("%d", &N);
+    N = scan();
     for(int i=1; i<=N; i++) {
-        scanf("%d", &arr[i]);
+        mods[i] = i % bs;
+        arr[i] = scan();
         mete(i, arr[i]);
-        ans += cuenta(1, i-1, arr[i]+1, H);
+        // ans += i-1 - cuenta(1, i-1, arr[i]);
+        // printf("\t%d => %d\n", arr[i], i-1 - cuenta(1, i-1, arr[i]));
+    }
+    // printf("%lld\n", ans);
+
+    for(int i=N; i; i--) {
+        ans += bt.cnt(arr[i]-1);
+        bt.mete(arr[i], 1);
     }
 
-    for(scanf("%d", &Q); Q; Q--) {
+    for(Q=scan(); Q; Q--) {
         int x, y, z;
-        scanf("%d%d", &x, &y);
+        x = scan();
+        y = scan();
         z = y;        
         y = arr[x];
 
@@ -153,22 +101,14 @@ int main() {
             continue;
         }
 
-        if(z < y) {
-            ans += cuenta(1, x-1, z+1, y);
-            ans -= cuenta(x+1, N, z, y-1);
-        }
-        else {
-            ans -= cuenta(1, x-1, y+1, z);
-            ans += cuenta(x+1, N, y, z-1);
-        }
-        // ans -= cuenta(1, x-1, y+1, H);
-        // ans -= cuenta(x+1, N, 0, y-1);
+        ans -= x-1 - cuenta(1, x-1, y);
+        ans -= cuenta(x+1, N, y-1);
         saca(x, y);
         arr[x] = z;
         mete(x, z);
-        // y = z;
-        // ans += cuenta(1, x-1, y+1, H);
-        // ans += cuenta(x+1, N, 0, y-1);
+        y = z;
+        ans += x-1 - cuenta(1, x-1, y);
+        ans += cuenta(x+1, N, y-1);
         
         printf("%lld\n", ans);
     }
