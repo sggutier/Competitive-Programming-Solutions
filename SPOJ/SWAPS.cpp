@@ -1,20 +1,106 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp> // Common file
-#include <ext/pb_ds/tree_policy.hpp> // Including tree_order_statistics_node_update
 using namespace std;
-using namespace __gnu_pbds;
-typedef tree<
-    int,
-    null_type,
-    less<int>,
-    rb_tree_tag,
-    tree_order_statistics_node_update>
-ordered_set;
 typedef long long ll;
-const int limN = 3e5 + 5;
-const int H = 50000;
+const int limN = 50000;
+// const int H = (1<<16);
+const int H = 250005;
 
-ordered_set ords[H*2 + 5];
+struct STree {
+    int cnt = 0;
+    STree *l = NULL, *r = NULL;
+    void insert(const int p) {
+        int l = 1;
+        int r = limN-1;
+        STree *t = this;
+        int mt;
+        while(true) {
+            t->cnt ++;
+            if(l==r)
+                break;
+            mt = (l+r) / 2;
+            if(p <= mt) {
+                if(t->l == NULL)
+                    t->l = new STree();
+                r = mt;
+                t = t->l;
+            }
+            else {
+                if(t->r == NULL)
+                    t->r = new STree();
+                l = mt+1;
+                t = t->r;
+            }
+        }
+    }
+    // void erase(const int p)  {
+    //     int l = 1;
+    //     int r = limN-1;
+    //     STree *t = this;
+    //     int mt;
+    //     while(true) {
+    //         t->cnt --;
+    //         if(l==r)
+    //             break;
+    //         mt = (l+r) / 2;
+    //         if(p <= mt) {
+    //             r = mt;
+    //             t = t->l;
+    //         }
+    //         else {
+    //             l = mt+1;
+    //             t = t->r;
+    //         }
+    //     }
+    // }
+    
+    void erase(const int p, const int xl = 1, const int xr = limN-1) {
+        cnt --;
+        if(xl == xr)
+            return;
+        int mt = (xl + xr) / 2;
+        if(p <= mt) {
+            l->erase(p, xl, mt);
+            if(l->cnt == 0) {
+                delete l;
+                l = NULL;
+            }
+        }
+        else {
+            r->erase(p, mt+1, xr);
+            if(r->cnt == 0) {
+                delete r;
+                r = NULL;
+            }
+        }
+    }
+    int order_of_key(const int p) {
+        int l = 1;
+        int r = limN-1;
+        STree *t = this;
+        int mt;
+        int ans = 0;
+        while(l < r) {
+            mt = (l+r) / 2;
+            if(p <= mt) {
+                if(t->l == NULL)
+                    break;
+                r = mt;
+                t = t->l;
+            }
+            else {                
+                if(t->l)
+                    ans += t->l->cnt ;
+                if(t->r == NULL)
+                    break;
+                l = mt+1;
+                t = t->r;
+            }
+        }
+        return ans;
+    }
+};
+
+STree ords[H*2 + 5];
 
 void mete(int x, int y) {
     for(y += H; y; y>>=1)
@@ -45,7 +131,7 @@ int cuenta(int xl, int xr, int yl, int yr) {
 
 int main() {
     int N ;
-    int arr[limN];
+    int arr[250005];
     int Q ;
     ll ans = 0;
 
@@ -59,18 +145,30 @@ int main() {
     for(scanf("%d", &Q); Q; Q--) {
         int x, y, z;
         scanf("%d%d", &x, &y);
-        z = y;
-        
+        z = y;        
         y = arr[x];
-        ans -= cuenta(1, x-1, y+1, H);
-        ans -= cuenta(x+1, N, 1, y-1);
+
+        if(z==y) {
+            printf("%lld\n", ans);
+            continue;
+        }
+
+        if(z < y) {
+            ans += cuenta(1, x-1, z+1, y);
+            ans -= cuenta(x+1, N, z, y-1);
+        }
+        else {
+            ans -= cuenta(1, x-1, y+1, z);
+            ans += cuenta(x+1, N, y, z-1);
+        }
+        // ans -= cuenta(1, x-1, y+1, H);
+        // ans -= cuenta(x+1, N, 0, y-1);
         saca(x, y);
-        
-        y = z;
         arr[x] = z;
-        mete(x, y);
-        ans += cuenta(1, x-1, y+1, H);
-        ans += cuenta(x+1, N, 1, y-1);
+        mete(x, z);
+        // y = z;
+        // ans += cuenta(1, x-1, y+1, H);
+        // ans += cuenta(x+1, N, 0, y-1);
         
         printf("%lld\n", ans);
     }
