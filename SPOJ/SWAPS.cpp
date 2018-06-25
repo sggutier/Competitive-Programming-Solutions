@@ -1,128 +1,77 @@
 #include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp> // Common file
+#include <ext/pb_ds/tree_policy.hpp> // Including tree_order_statistics_node_update
 using namespace std;
-const int H = 50000;
+using namespace __gnu_pbds;
+typedef tree<
+    int,
+    null_type,
+    less<int>,
+    rb_tree_tag,
+    tree_order_statistics_node_update>
+ordered_set;
+typedef long long ll;
 const int limN = 3e5 + 5;
+const int H = 50000;
 
-struct Nodo {
-    int cnt ;
-    Nodo *ul, *ur, *dl, *dr;
-    Nodo() : cnt(0), ul(NULL), ur(NULL), dl(NULL), dr(NULL){}
-};
+ordered_set ords[H*2 + 5];
 
-int N;
-int txl, txr, tyl, tyr;
-
-int _cnt(const Nodo* t, 
-        const int xl=0, const int xr=N-1, const int yl=0, const int yr=H-1) {
-    if(!t) return 0;
-    if(xr < txl || txr < xl || yr < tyl || tyr < yl)
-        return 0;
-    if(xl > xr || yl > yr)
-        return 0;
-    // printf("Buscando intervalo %d %d a %d %d\n", txl, txr, tyl, tyr);
-    // printf("\tActualmente en %d %d a %d %d\n", xl, xr, yl, yr);
-    if(txl <= xl && xr <= txr && tyl <= yl && yr <= tyr) 
-        return t->cnt;
-    int px = (xl + xr) / 2, py = (yl + yr) / 2;
-    return
-        _cnt(t->dl,
-            xl, px, yl, py) +
-        _cnt(t->ul,
-            xl, px, py+1, yr) +
-        _cnt(t->dr,
-            px+1, xr, yl, py) +
-        _cnt(t->ur,
-            px+1, xr, py+1, yr);
+void mete(int x, int y) {
+    for(y += H; y; y>>=1)
+        ords[y].insert(x);
 }
 
-int cnt(const Nodo *t, const int _txl, const int _txr, const int _tyl, const int _tyr) {
-    txl = _txl;
-    txr = _txr;
-    tyl = _tyl;
-    tyr = _tyr;
-    return _cnt(t);
+void saca(int x, int y) {
+    for(y += H; y; y>>=1)
+        ords[y].erase(x);
 }
 
-void mete(Nodo* t, const int tx, const int ty, const int nov,
-          int xl=0, int xr=N-1, int yl=0, int yr=H-1) {
-    // printf("Metiendo %d en %d %d.\n  \tActualmente en %d %d a %d %d\n", nov, tx, ty, xl, xr, yl, yr);
-    int px, py;
-    while(true) {
-        t->cnt += nov;
-        if(xl == xr && yl == yr)
-            return ;
-        px = (xl + xr) / 2, py = (yl + yr) / 2;
-        if(tx <= px) {
-            if(ty <= py) {
-                // printf("\tCuad dl\n");
-                if(!t->dl)
-                    t->dl = new Nodo();
-                t = t->dl;
-                xr = px, yr = py;
-            }
-            else {
-                // printf("\tCuad ul\n");
-                if(!t->ul)
-                    t->ul = new Nodo();
-                t = t->ul;
-                xr = px, yl = py+1;
-            }
+int cuenta(int xl, int xr, int yl, int yr) {
+    if(xr < xl || yr < yl)
+        return 0;
+    int ans = 0;
+    for(yl += H, yr += H+1; yl<yr; yl>>=1, yr>>=1) {
+        if(yl & 1) {
+            ans += ords[yl].order_of_key(xr+1) - ords[yl].order_of_key(xl) ;
+            yl ++;
         }
-        else {
-            if(ty <= py) {
-                // printf("\tCuad dr\n");
-                if(!t->dr)
-                    t->dr = new Nodo();
-                t = t->dr;
-                xl = px+1, yr = py;
-            }
-            else {
-                // printf("\tCuad ur\n");
-                if(!t->ur)
-                    t->ur = new Nodo();
-                t = t->ur;
-                xl = px+1, yl = py+1;
-            }
+        if(yr & 1) {
+            yr --;
+            ans += ords[yr].order_of_key(xr+1) - ords[yr].order_of_key(xl) ;
         }
     }
+    return ans;
 }
-
-Nodo *t = new Nodo();
-long long ans = 0;
-int arr[limN];
 
 int main() {
-    int Q;
-    
+    int N ;
+    int arr[limN];
+    int Q ;
+    ll ans = 0;
+
     scanf("%d", &N);
-    for(int i=0, a; i<N; i++) {
-        scanf("%d", &a);
-        a--;
-        arr[i] = a;
-        if(a+1 <= H-1 && i)
-            ans += cnt(t, 0, i-1, a+1, H-1);
-        mete(t, i, a, 1);
+    for(int i=1; i<=N; i++) {
+        scanf("%d", &arr[i]);
+        mete(i, arr[i]);
+        ans += cuenta(1, i-1, arr[i]+1, H);
     }
 
-    scanf("%d", &Q);
-    while(Q--) {
+    for(scanf("%d", &Q); Q; Q--) {
         int x, y, z;
         scanf("%d%d", &x, &y);
-        x--, y--;
         z = y;
+        
         y = arr[x];
-        if(y+1 <= H-1 && x)
-            ans -= cnt(t, 0, x-1, y+1, H-1);
-        if(y && x+1 <= N-1)
-            ans -= cnt(t, x+1, N-1, 0, y-1);
-        mete(t, x, y, -1);
+        ans -= cuenta(1, x-1, y+1, H);
+        ans -= cuenta(x+1, N, 1, y-1);
+        saca(x, y);
+        
         y = z;
         arr[x] = z;
-        mete(t, x, y, 1);
-        if(y+1 <= H-1 && x)
-            ans += cnt(t, 0, x-1, y+1, H-1);
-        if(y && x+1 <= N-1)
-            ans += cnt(t, x+1, N-1, 0, y-1);
+        mete(x, y);
+        ans += cuenta(1, x-1, y+1, H);
+        ans += cuenta(x+1, N, 1, y-1);
+        
         printf("%lld\n", ans);
     }
 }
