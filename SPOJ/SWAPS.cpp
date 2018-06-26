@@ -1,3 +1,4 @@
+// Got the idea from here: http://codeforces.com/blog/entry/19551?#comment-243538
 #include <cstdio>
 #include <algorithm>
 #include <cstring>
