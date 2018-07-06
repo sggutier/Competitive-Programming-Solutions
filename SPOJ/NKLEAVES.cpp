@@ -1,61 +1,89 @@
 #include <bits/stdc++.h>
 using namespace std;
-const int limN = 1e5 + 5;
-const int limK = 11;
 typedef long long ll;
+const int limN = 2e5 + 5;
+const int limK = 15;
 
-int N, K ;
-int nums[limN];
-ll acum[limN], tot[limN];
+int N, K;
+ll wt[limN];
+ll A[limN], B[limN];
 ll dp[limK][limN];
-ll m[limN];
-deque <int> Q ;
+int anso[limK][limN];
+
+ll cost(int i, int n) {
+	i --;
+	//~ printf("pidiendo costo de %d %d\n", i+1, n);
+	//~ printf("costo es %lld\n", (A[n]-A[i]) - i*(B[n]-B[i]));
+	return (A[n]-A[i]) - i*(B[n]-B[i]);
+}
+
+void solve(int k, int b, int e, int optB, int optE) {
+	if(b > e) return;
+	if(k==1) return;
+	int m = (b+e)/2;
+	ll val = (1LL<<60), pos = -1;
+	for(int i=optB; i<=min(optE, m); i++) {
+		ll vdp = cost(i, m) + dp[k-1][i-1];
+		if( vdp < val) {
+			val = vdp;
+			pos = i;
+		}
+	}
+	dp[k][m] = val;
+	solve(k, b, m-1, optB, pos);
+	solve(k, m+1, e, pos, optE);
+}
 
 int main() {
-    scanf("%d%d", &N, &K);
-    for(int i=0; i<N; i++)
-        scanf("%d", &nums[i]);
-
-    for(int i=N-1; i>=0; i--) {
-        acum[i] = acum[i+1] + tot[i+1];
-        tot[i] = nums[i] + tot[i+1];
-        dp[0][i] = m[i] = (1LL<<61);
-    }
-
-    Q.push_back(N);
-    for(int k=1; k<=K; k++) {
-        for(int i=0; i<N; i++) {
-            // dp[k][i] = (1LL<<62);
-            // for(int j=i+1; j<=N; j++) {
-            //     dp[k][i] = min(dp[k][i], m[j]  + i * tot[j]);
-            // }
-            while(Q.size() >= 2) {
-                int p = Q.back(); Q.pop_back();
-                int q = Q.back();
-                if(m[p] + tot[p] * i < m[q] + tot[q] * i) {
-                    Q.push_back(p);
-                    break;
-                }
-            }
-            int w = Q.back();
-            dp[k][i] = m[w] + tot[w] * i;
-            dp[k][i] += acum[i];
-        }
-        Q.clear();
-        for(int i=0; i<N; i++)
-            m[i] = dp[k][i] - tot[i]*i - acum[i];
-        for(int i=0; i<=N; i++) {
-            while(Q.size() >= 2) {
-                int p = Q.front(); Q.pop_front();
-                int q = Q.front();
-                if( (m[q] - m[p]) * (tot[p] - tot[i]) >= (m[p] - m[i]) * (tot[q] - tot[p]) ) {
-                    Q.push_front(p);
-                    break;
-                }
-            }
-            Q.push_front(i);
-        }
-    }
-
-    printf("%lld\n", dp[K][0]);
+	//~ N = 1000 ;
+	//~ K = 11;
+	//~ for(int i=1; i<=N; i++)
+		//~ wt[i] = random() % 1000 + 1;
+		//~ wt[i] = 1000;
+	scanf("%d%d", &N, &K);
+	for(int i=1; i<=N; i++) {
+		scanf("%lld", &wt[i]);
+	}
+	for(int i=1; i<=N; i++) {
+		A[i] = A[i-1] + (i-1)*wt[i];
+		B[i] = B[i-1] + wt[i];
+		dp[1][i] = A[i];
+		//~ printf("%lld ", dp[1][i]);
+	}
+	//~ K = min(K, N);
+	//~ printf("\n");
+	//~ for(int k=2; k<=K; k++) {
+		//~ printf("%d :: ", k);
+		//~ anso[k][N+1] = N;
+		//~ for(int i=1; i<=N; i++) {
+		//~ for(int n=1; n<=N; n++) {
+		//~ int ue = N;
+		//~ for(int n=N; n; n --) {
+			//~ dp[k][n] = A[n];
+			//~ for(int i=anso[k-1][n]; i<=anso[k][n+1]; i++) {
+			//~ for(int i=0; i<n; i++) {
+				//~ if(!dp[k-1][i])
+					//~ printf("Desde %d %d busque %d %d y no haylle nada\n", k, n, k-1, i);
+				//~ ll cst = dp[k-1][i] + (A[n]-A[i]) - i*(B[n]-B[i]);
+				//~ if(cst <= dp[k][n]) {
+					//~ dp[k][n] = cst;
+					//~ anso[k][n] = i;
+				//~ }
+			//~ }
+			//~ ue = n;
+		//~ }
+		//~ for(int n=N; N-n+k <= K && n ; n-- ) {
+			//~ ue = n;
+		//~ }
+		//~ for(int n=1; n<=N; n++) 
+			//~ printf("%lld ", dp[k][n]);
+			//~ printf("%3d ", anso[k][n]);
+		//~ printf("\n");
+		//~ printf("inito es %d\n", ue);
+	//~ }
+	//~ printf("%lld\n", dp[K][N]);
+	
+	for(int k=2; k<=K; k++)
+		solve(k, 1, N, 1, N);
+	printf("%lld\n", dp[K][N]);
 }
