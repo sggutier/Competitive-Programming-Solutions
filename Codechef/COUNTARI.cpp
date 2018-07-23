@@ -10,57 +10,65 @@ typedef pair<int, int> pii;
 typedef vector<int> vi;
 
 #include <valarray>
-typedef long double ld;
+typedef double ld;
 const int limN = 1e5 + 5;
 const int limK = 30000 + 5;
 
-typedef valarray<complex<ld> > carray;
-void fft(carray& x, carray& roots) {
-	int N = sz(x);
-	if (N <= 1) return;
-	carray even = x[slice(0, N/2, 2)];
-	carray odd = x[slice(1, N/2, 2)];
-	carray rs = roots[slice(0, N/2, 2)];
-	fft(even, rs);
-	fft(odd, rs);
-	rep(k,0,N/2) {
-		auto t = roots[k] * odd[k];
-		x[k    ] = even[k] + t;
-		x[k+N/2] = even[k] - t;
-	}
+
+const double pi2 = 2 * atan2(0, -1);
+typedef complex<double> point;
+typedef valarray<point > carray;
+void fft(carray &a, int sign = +1) {
+    int n = a.size(); 
+    for (int i = 1, j = 0; i < n - 1; ++i)  {
+        for (int k = n >> 1; (j ^= k) < k; k >>= 1); 
+        if (i < j) swap(a[i], a[j]);
+    } 
+    double theta = pi2 * sign; 
+    for (int m, mh = 1; (m = mh << 1) <= n; mh = m) {
+        point wm(cos(theta / m), sin(theta / m)), w(1, 0);
+        for (int i = 0; i < n; i += m, w = point(1, 0))
+            for (int j = i, k = j + mh; j < i + mh; ++j, ++k, w = w * wm) {
+                point x = a[j], y = a[k] * w;
+                a[j] = x + y;
+                a[k] = x - y;
+            }
+    }
+ 
+    if (sign == -1)
+        for (point &p : a) p = p / (1. * n);
 }
 
-typedef vector<ld> vd;
+typedef vector<double> vd;
 vd conv(const vd& a, const vd& b) {
-	int s = sz(a) + sz(b) - 1, L = 32-__builtin_clz(s), n = 1<<L;
-	if (s <= 0) return {};
-	carray av(n), bv(n), roots(n);
-	rep(i,0,n) roots[i] = polar(1.0, -2 * M_PI * i / n);
-	copy(all(a), begin(av)); fft(av, roots);
-	copy(all(b), begin(bv)); fft(bv, roots);
-	roots = roots.apply(conj);
-	carray cv = av * bv; fft(cv, roots);
-	vd c(s); rep(i,0,s) c[i] = cv[i].real() / n;
-	return c;
+    int s = sz(a) + sz(b) - 1, L = 32-__builtin_clz(s), n = 1<<L;
+    if (s <= 0) return {};
+    carray av(n), bv(n);
+    copy(all(a), begin(av)); fft(av, 1);
+    copy(all(b), begin(bv)); fft(bv, 1);
+    carray cv = av * bv; fft(cv, -1);
+    vd c(s); rep(i,0,s) c[i] = cv[i].real();
+    return c;
 }
 
-vd izq, der;
+
+vd izq(limK), der(limK), c;
 int arr[limN];
 
 ll calca(int l, int r) {
     ll ans = 0;
-    vd c;
+    // vd c;
     for(int i=l; i<=r; i++)
         der[arr[i]]-=1.0;
     c = conv(izq, der);
     for(int i=l; i<=r; i++) {
-        ans += ((ll) roundl(c[2*arr[i]])) ;
+        ans += ((ll) round(c[2*arr[i]])) ;
         for(int j=i+1, s; j<=r; j++) {
             s = 2*arr[j] - arr[i];
-            if(s >= 0 && s < 2*limK)
+            if(s >= 0 && s < limK)
                 ans += (ll) der[s];
             s = 2*arr[i] - arr[j];
-            if(s >= 0 && s < 2*limK)
+            if(s >= 0 && s < limK)
                 ans += (ll) izq[s];
         }
         izq[arr[i]]+=1.0;
@@ -73,24 +81,13 @@ int main() {
     ll ans = 0;
     int rt ;
     scanf("%d", &N);
-    if(N >= limN) {
-        printf("-1\n");
-        return 0;
-    }
-    izq.resize(limK);
-    der.resize(limK);
     for(int i=0; i<N; i++) {
         scanf("%d", &arr[i]);
-        if(arr[i] <= 0 || arr[i] > 30000) {
-            printf("-1\n");
-            return 0;
-        }
-        // arr[i] = min(i, 30000);
         der[arr[i]]+=1.0;
     }
     
-    // rt = 2;
-    rt = max(1.0, sqrt(N));
+    rt = 2500;
+    // rt = max(1.0, sqrt(N));
     for(int i=0; i<N; i+=rt) {
         ans += calca(i, min(i+rt-1, N-1));
         // printf("%d %d\n", i, min(i+rt-1, N-1));
