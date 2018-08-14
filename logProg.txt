@@ -1,69 +1,31 @@
-#+BEGIN: clocktable :maxlevel 2 :scope file :block thisweek
-#+CAPTION: Clock summary at [2018-06-22 ven 18:59], for week 2018-W25.
-| Headline           |  Time |      |
-|--------------------+-------+------|
-| *Total time*         | *16:49* |      |
-|--------------------+-------+------|
-| Documentar         |  0:24 |      |
-| [[http://www.spoj.com/problems/MSE08H/][SPOJ-MSE08H]]        |  4:07 |      |
-| \_  Pensar         |       | 3:54 |
-| \_  Programar      |       | 0:13 |
-| SRM452-D1-500      |  2:01 |      |
-| \_  Pensar         |       | 0:59 |
-| \_  Programar      |       | 0:30 |
-| \_  Debugear       |       | 0:32 |
-| Concurso: CF992-D2 |  2:30 |      |
-| CF101656-GYM-K     |  0:26 |      |
-| CF465-D2-A         |  0:03 |      |
-| \_  Leer           |       | 0:01 |
-| \_  Programar      |       | 0:02 |
-| CF463-D2-B         |  0:07 |      |
-| \_  Leer           |       | 0:03 |
-| \_  Programar      |       | 0:04 |
-| CF453-D1-A         |  0:08 |      |
-| \_  Leer           |       | 0:02 |
-| \_  Pensar         |       | 0:03 |
-| \_  Programar      |       | 0:03 |
-| CF543-D1-A         |  0:11 |      |
-| \_  Leer           |       | 0:04 |
-| \_  Pensar         |       | 0:03 |
-| \_  Programar      |       | 0:04 |
-| CF496-D2-D         |  0:23 |      |
-| \_  Leer           |       | 0:05 |
-| \_  Pensar         |       | 0:05 |
-| \_  Programar      |       | 0:11 |
-| \_  Debugear       |       | 0:02 |
-| CF519-D2-E         |  1:23 |      |
-| \_  Leer           |       | 0:03 |
-| \_  Pensar         |       | 0:14 |
-| \_  Programar      |       | 0:57 |
-| \_  Debugear       |       | 0:09 |
-| CF100283-Gym-C     |  1:13 |      |
-| \_  Leer           |       | 0:07 |
-| \_  Pensar         |       | 0:27 |
-| \_  Programar      |       | 0:22 |
-| \_  Debugear       |       | 0:17 |
-| CF459-D2-C         |  0:59 |      |
-| \_  Leer           |       | 0:02 |
-| \_  Pensar         |       | 0:37 |
-| \_  Programar      |       | 0:18 |
-| \_  Debugear       |       | 0:02 |
-| Conco              |  1:39 |      |
-| CF442-D1-B         |  0:30 |      |
-| \_  Leer           |       | 0:01 |
-| \_  Programar      |       | 0:07 |
-| \_  Pensar         |       | 0:22 |
-| HR-meeting-point   |  0:45 |      |
-| \_  Leer           |       | 0:03 |
-| \_  Pensar         |       | 0:16 |
-| \_  Programar      |       | 0:13 |
-| \_  Debugear       |       | 0:13 |
+#+BEGIN: clocktable :maxlevel 2 :scope file :block today
+#+CAPTION: Clock summary at [2018-06-26 mar 20:44], for mardo, Junio 26, 2018.
+| Headline      | Time |      |
+|---------------+------+------|
+| *Total time*    | *3:03* |      |
+|---------------+------+------|
+| Documentar    | 0:16 |      |
+| Codechef-B3   | 1:04 |      |
+| \_  Leer      |      | 0:03 |
+| \_  Pensar    |      | 0:21 |
+| \_  Programar |      | 0:20 |
+| \_  Debugear  |      | 0:20 |
+| CF109-D1-C    | 0:57 |      |
+| \_  Leer      |      | 0:05 |
+| \_  Pensar    |      | 0:24 |
+| \_  Programar |      | 0:15 |
+| \_  Debugear  |      | 0:13 |
+| ZOJ-3213      | 0:46 |      |
+| \_  Leer      |      | 0:01 |
+| \_  Pensar    |      | 0:45 |
 #+END:
 
 
 * Documentar
   :LOGBOOK:
-  CLOCK: [2018-06-22 ven 18:53]
+  CLOCK: [2018-06-26 mar 12:14]--[2018-06-26 mar 12:30] =>  0:16
+  CLOCK: [2018-06-22 ven 23:49]--[2018-06-23 sab 00:01] =>  0:12
+  CLOCK: [2018-06-22 ven 18:53]--[2018-06-22 ven 19:46] =>  0:53
   CLOCK: [2018-06-20 mer 13:30]--[2018-06-20 mer 13:54] =>  0:24
   CLOCK: [2018-06-20 mer 13:54]--[2018-06-20 mer 13:54] =>  0:00
   CLOCK: [2018-06-13 mer 13:45]--[2018-06-13 mer 13:58] =>  0:13
@@ -809,7 +771,7 @@
    CLOCK: [2018-06-20 mer 22:51]--[2018-06-20 mer 22:53] =>  0:02
    :END:
 
-* Conco
+* Concurso: CF999-D3
   :LOGBOOK:
   CLOCK: [2018-06-21 ĵaŭ 09:36]--[2018-06-21 ĵaŭ 11:15] =>  1:39
   :END:
@@ -846,4 +808,190 @@
 ** Debugear
    :LOGBOOK:
    CLOCK: [2018-06-22 ven 18:36]--[2018-06-22 ven 18:49] =>  0:13
+   :END:
+
+* CF281-D2-C
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-22 ven 20:47]--[2018-06-22 ven 20:49] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-22 ven 21:34]--[2018-06-22 ven 23:02] =>  1:28
+   CLOCK: [2018-06-22 ven 20:49]--[2018-06-22 ven 21:14] =>  0:25
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-22 ven 23:03]--[2018-06-22 ven 23:38] =>  0:35
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-22 ven 23:40]--[2018-06-22 ven 23:45] =>  0:05
+   :END:
+
+* Concurso: RPC-2018-06
+  :LOGBOOK:
+  CLOCK: [2018-06-23 sab 13:00]--[2018-06-23 sab 18:00] =>  5:00
+  :END:
+
+* Concurso: CF995-D1
+  :LOGBOOK:
+  CLOCK: [2018-06-24 dim 11:30]--[2018-06-24 dim 13:30] =>  2:00
+  :END:
+
+* SPOJ-SWAPS
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-24 dim 21:04]--[2018-06-24 dim 21:06] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-25 lun 14:06]--[2018-06-25 lun 14:24] =>  0:18
+   CLOCK: [2018-06-24 dim 21:26]--[2018-06-24 dim 21:56] =>  0:30
+   CLOCK: [2018-06-24 dim 21:06]--[2018-06-24 dim 21:25] =>  0:19
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-25 lun 18:10]--[2018-06-25 lun 18:46] =>  0:36
+   CLOCK: [2018-06-25 lun 16:33]--[2018-06-25 lun 17:58] =>  1:25
+   CLOCK: [2018-06-25 lun 15:40]--[2018-06-25 lun 16:08] =>  0:28
+   CLOCK: [2018-06-25 lun 14:53]--[2018-06-25 lun 15:05] =>  0:12
+   CLOCK: [2018-06-25 lun 14:25]--[2018-06-25 lun 14:43] =>  0:18
+   CLOCK: [2018-06-25 lun 11:55]--[2018-06-25 lun 12:36] =>  0:41
+   CLOCK: [2018-06-25 lun 11:04]--[2018-06-25 lun 11:07] =>  0:03
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-25 lun 14:43]--[2018-06-25 lun 14:49] =>  0:06
+   CLOCK: [2018-06-25 lun 12:36]--[2018-06-25 lun 12:46] =>  0:10
+   :END:
+
+* Codechef-B3
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-26 mar 11:04]--[2018-06-26 mar 11:07] =>  0:03
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-26 mar 11:34]--[2018-06-26 mar 11:41] =>  0:07
+   CLOCK: [2018-06-26 mar 11:07]--[2018-06-26 mar 11:21] =>  0:14
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-26 mar 11:41]--[2018-06-26 mar 11:48] =>  0:07
+   CLOCK: [2018-06-26 mar 11:21]--[2018-06-26 mar 11:34] =>  0:13
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-26 mar 11:53]--[2018-06-26 mar 12:13] =>  0:20
+   :END:
+
+* CF109-D1-C
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-26 mar 18:37]--[2018-06-26 mar 18:42] =>  0:05
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-26 mar 18:53]--[2018-06-26 mar 19:17] =>  0:24
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-06-26 mar 19:17]--[2018-06-26 mar 19:21] =>  0:04
+   CLOCK: [2018-06-26 mar 18:42]--[2018-06-26 mar 18:53] =>  0:11
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-06-26 mar 19:22]--[2018-06-26 mar 19:35] =>  0:13
+   :END:
+
+* ZOJ-3213
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-26 mar 19:57]--[2018-06-26 mar 19:58] =>  0:01
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-07-11 mer 17:52]--[2018-07-11 mer 20:52] =>  3:00
+   CLOCK: [2018-06-26 mar 19:58]--[2018-06-26 mar 20:43] =>  0:45
+   :END:
+
+* Concurso: CF1000-D2
+  :LOGBOOK:
+  CLOCK: [2018-06-27 mer 09:30]--[2018-06-27 mer 11:30] =>  2:00
+  :END:
+
+* UVA-10117
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-27 mer 19:28]--[2018-06-27 mer 19:31] =>  0:03
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-07-11 mer 11:39]--[2018-07-11 mer 12:55] =>  1:16
+   :END:
+** Debugear
+   :LOGBOOK:
+   CLOCK: [2018-07-11 mer 12:55]--[2018-07-11 mer 13:12] =>  0:17
+   :END:
+
+* LA-4589
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-28 ĵaŭ 18:32]--[2018-06-28 ĵaŭ 18:34] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-28 ĵaŭ 18:34]--[2018-06-28 ĵaŭ 18:47] =>  0:13
+   :END:
+
+* SPOJ-CH3D
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-06-28 ĵaŭ 19:01]--[2018-06-28 ĵaŭ 19:06] =>  0:00
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-06-28 ĵaŭ 19:06]--[2018-06-28 ĵaŭ 19:06] =>  0:00
+   :END:
+** Programar
+
+* SRM326-D1-500
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-07-19 ĵaŭ 11:38]--[2018-07-19 ĵaŭ 11:42] =>  0:04
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-07-19 ĵaŭ 11:42]--[2018-07-19 ĵaŭ 13:07] =>  1:25
+   CLOCK: [2018-07-19 ĵaŭ 11:08]--[2018-07-19 ĵaŭ 11:28] =>  0:20
+   :END:
+
+* SRM552-D2-1000
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-07-19 ĵaŭ 18:50]--[2018-07-19 ĵaŭ 18:53] =>  0:03
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-07-19 ĵaŭ 18:53]--[2018-07-19 ĵaŭ 19:35] =>  0:42
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-07-20 ven 18:44]--[2018-07-20 ven 18:56] =>  0:12
+   CLOCK: [2018-07-20 ven 18:10]--[2018-07-20 ven 18:44] =>  0:34
+   :END:
+
+* CF282-D2-E
+** Leer
+   :LOGBOOK:
+   CLOCK: [2018-07-20 ven 20:18]--[2018-07-20 ven 20:20] =>  0:02
+   :END:
+** Pensar
+   :LOGBOOK:
+   CLOCK: [2018-07-20 ven 20:20]--[2018-07-20 ven 20:29] =>  0:09
+   :END:
+** Programar
+   :LOGBOOK:
+   CLOCK: [2018-07-20 ven 20:29]--[2018-07-20 ven 20:46] =>  0:17
    :END:

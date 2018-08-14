@@ -31,9 +31,6 @@ int gana(int r, int c) {
                 gana(r-i,c-j)] = w;
         }
     }
-    // printf("El mex de %d %d es\n", r, c);
-    // printf("\t");
-    // printf("\n");
     for(int i=0; ; i++) {
         if(mex[i] != w)
             return ganaMem[r][c] = i;

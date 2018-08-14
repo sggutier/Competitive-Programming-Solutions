@@ -1,89 +1,96 @@
-#include <iostream>
-#include <algorithm>
-#include <cstdio>
-#include <string>
-#include <cstring>
-using namespace std ;
-#define lim 100005
+#include <bits/stdc++.h>
+using namespace std;
+const int limB = 1<<20;
+const int limN = 20;
 
-int N ;
-char S[lim] ;
-bool res[4] ;
+bool usdA[limB][limN], usdB[limB][limN];
+int ansA[limB][limN], ansB[limB][limN];
 
-int evalCarg() {
-    int a, b ;
+int ja(int n, int k);
+int jb(int n, int k);
 
-    if( S[N-1]=='1' )
-        a = 1 ;
-    else if( S[N-1]=='0' )
-        a = 0 ;
-    else
-        a = 2 ;
-    for( int i=N-2; i>=0; i-- ) {
-        if( S[i] != S[i+1] || S[i]=='?' ) {
-            if( S[i]=='1' )
-                b = 1 ;
-            else if( S[i]=='0' )
-                b = 0 ;
-            else
-                b = 2 ;
-            break ;
-        }
+int ja(int n, int k) {
+    if(k==2)
+        return n;
+    if(usdA[n][k])
+        return ansA[n][k];
+    usdA[n][k] = true;
+    int &ans = ansA[n][k];
+    ans = jb(n>>1, k-1);
+    for(int i=1; i<k; i++) {
+        ans = min(ans, jb( ((n>>(i+1))<<i) + n%(1<<i), k-1) );
     }
-
-    //cout << a << " " << b << endl ;
-
-    if( b==0 || b==1 ) {
-        if( a==0 || a==1 ) {
-            res[ (b<<1) + a ] = 1 ;
-        }
-        else {
-            if( (b<<1)+0 == 1 || (b<<1)+0 == 2 )
-                res[ (b<<1) + 0 ] = 1 ;
-            if( (b<<1)+1 == 1 || (b<<1)+1 == 2 )
-                res[ (b<<1) + 1 ] = 1 ;
-        }
-    }
-    else {
-        if( a==0 || a==1 ) {
-            if( 0+a == 1 || 0+a == 2 )
-                res[ 0 + a ] = 1 ;
-            if( 2+a == 1 || 2+a == 2 )
-                res[ 2 + a ] = 1 ;
-        }
-        else {
-            res[1] = 1 ;
-            res[2] = 1 ;
-        }
-    }
+    return ans;
 }
 
+int jb(int n, int k) {
+    if(k==2)
+        return n;
+    if(usdB[n][k])
+        return ansB[n][k];
+    usdB[n][k] = true;
+    int &ans = ansB[n][k];
+    ans = ja(n>>1, k-1);
+    for(int i=1; i<k; i++) {
+        ans = max(ans, ja( ((n>>(i+1))<<i) + n%(1<<i), k-1) );
+    }
+    return ans;
+}
+
+void pint(int n, int k) {
+    int w = 0;
+    for(int i=k-1; i>=0; i--) {
+        printf("%d", (1<<i) & n? 1 : 0);
+        if((1<<i) & n)
+            w ++;
+    }
+    printf(" => %d\n", w);
+}
+
+char str[limB];
+
 int main() {
-    int op=0, carg=0 ;
-    string strRes[4] = { "00", "01", "10", "11" } ;
+    // int n = 0, k = 0;
+    // char str[100];
 
-    scanf("%s", S ) ;
-    N = strlen(S) ;
+    // // scanf("%s", str);
+    // // for(char *c=str; *c; c++) {
+    // //     n = n*2 + *c-'0';
+    // //     k++;
+    // // }
 
-    for( int i=0; i<N; i++ ) {
-        if( S[i]=='0' )
-            carg -- ;
-        else if( S[i]=='1' )
-            carg ++ ;
-        else
-            op ++ ;
+    // int k;
+    // scanf("%d", &k);
+    // vector<int> ans[4];
+    // for(int i=(1<<k)-1; i>=0; i--) 
+    //     // printf("%d => %d\n", i, ja(i, k));
+    //     ans[ja(i,k)].push_back(i);
+    // for(int i=0; i<4; i++) {
+    //     printf("==== %d\n", i);
+    //     for(const int c : ans[i])
+    //         pint(c, k);
+    // }
+    // return 0;
+    scanf("%s", str);
+    int mino=0, maxo=0, n=0;
+    char ut = '?';
+    for(char *c = str; *c; c++) {
+        mino += *c=='1'? 1 : 0;
+        maxo += *c!='0'? 1 : 0;
+        ut = *c;
+        n++;
     }
 
-    if( carg-op<=-1 )
-        res[0] = 1 ;
-    if( carg+op>=2 )
-        res[3] = 1 ;
-    if( abs(carg)-1<=op )
-        evalCarg() ;
-
-    for( int i=0; i<4; i++ )
-        if( res[i] )
-            cout << strRes[i] << endl ;
-
-    return 0 ;
+    n = (n+1)/2;
+    // printf("%d %d %d\n", mino, maxo, n);
+    if(mino <= n-1)
+        printf("00\n");
+    if(mino <= n && n <= maxo) {
+        if(ut=='1' || (ut=='?' && mino+1 <= n) )
+            printf("01\n");
+        if(ut=='0' || (ut=='?' && n <= maxo-1))
+            printf("10\n");
+    }
+    if(n+1 <= maxo)
+        printf("11\n");
 }
