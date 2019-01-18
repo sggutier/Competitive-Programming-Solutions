@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-const int limN = 1000;
-const int limW = 30;
+const int limN = 1005;
+const int limW = 1005;
 
 bool usd[limN+1][limW+1];
 int maxValMemo[limN+1][limW+1];
@@ -23,7 +23,7 @@ int maxVal(int w, int pos=0) {
 
 void testCase() {
     memset(usd, 0, sizeof(usd));
-    scanf("%d", &objCnt);
+    // scanf("%d", &objCnt);
     for(int i=0; i<objCnt; i++) {
         scanf("%d%d", &vals[i], &weighs[i]);
     }
@@ -41,8 +41,7 @@ void testCase() {
 int main() {
     int tc;
 
-    scanf("%d", &tc);
-    while(tc--)
+    while(scanf("%d", &objCnt) != EOF)
         testCase();
     
     return 0;

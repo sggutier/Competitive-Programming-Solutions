@@ -8,18 +8,23 @@ using namespace std;
 typedef long long ll;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
+const int MAXN = 5000000;
+bitset <MAXN> is_composite;
+bitset <MAXN> isprime;
 
-const int MAX_PR = 5000000;
-bitset<MAX_PR> isprime;
-vi eratosthenes_sieve(int lim) {
-	isprime.set(); isprime[0] = isprime[1] = 0;
-	for (int i = 4; i < lim; i += 2) isprime[i] = 0;
-	for (int i = 3; i*i < lim; i += 2) if (isprime[i])
-		for (int j = i*i; j < lim; j += i*2) isprime[j] = 0;
-	vi pr;
-	rep(i,2,lim) if (isprime[i]) pr.push_back(i);
-	return pr;
+vector<int> sieve (int n) {
+    vector <int> prime;
+	for (int i = 2; i < n; ++i) {
+        isprime[i] = !is_composite[i];
+		if (!is_composite[i]) prime.push_back (i);
+		for (int j = 0; j < (int) prime.size () && i * prime[j] < n; ++j) {
+			is_composite[i * prime[j]] = true;
+			if (i % prime[j] == 0) break;
+		}
+	}
+    return prime;
 }
+
 
 typedef unsigned long long ull;
 const int bits = 10;
@@ -90,7 +95,7 @@ vector<ull> factor(ull d) {
 	return res;
 }
 void init(int bits) {//how many bits do we use?
-	vi p = eratosthenes_sieve(1 << ((bits + 2) / 3));
+	vi p = sieve(1 << ((bits + 2) / 3));
 	pr.assign(all(p));
 }
 
