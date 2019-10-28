@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef pair<int,int> pii;
-typedef pair<pii, int> pss;
 #define r first
 #define c second
 const int gridSiz = 100;
