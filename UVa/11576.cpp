@@ -20,7 +20,6 @@ int KMP(char *S, char *Q, const int &N, int *tab) {
             i = tab[i];
         i++, j++;
     }
-    //printf("%s %s => %d\n", S, Q, i);
     return i;
 }
 
