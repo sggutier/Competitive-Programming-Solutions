@@ -1,45 +1,77 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-ll mod1 = 1e9 + 7;
-ll mod2 = 1e8 + 7;
-const int limN = 2000;
+const ll MOD_A = 1e9 + 7 ;
+const ll MOD_B = 1e8 + 7 ;
 
-int sumo[limN];
-char bumal[limN];
-string str;
-int buCnt[limN];
+struct Mint {
+    ll x, y;
+    Mint(ll a) {
+        this->x = this->y = a;
+    }
+    Mint(ll x, ll y) {
+        this->x = x % MOD_A;
+        this->y = y % MOD_B;
+    }
+    Mint operator+( Mint otr ) {
+        return Mint(
+            this->x + otr.x,
+            this->y + otr.y
+        );
+    }
+    Mint operator-( Mint otr ) {
+        return Mint(
+            this->x - otr.x + MOD_A,
+            this->y - otr.y + MOD_B
+        );
+    }
+    Mint operator*( Mint otr ) {
+        return Mint(
+            this->x * otr.x,
+            this->y * otr.y
+        );
+    }
+    bool operator<(const Mint otr) const {
+        if(this->x != otr.x) {
+            return this->x < otr.x;
+        }
+        return this->y < otr.y ;
+    }
+};
 
-set <pair <int, int> > anso;
+set <Mint> usd;
 
 int main() {
-    int N, K ;
-    int ans = 0;
-    
-    scanf("%s", bumal);
-    str = string(bumal);
-    N = str.size();
-    scanf("%s", bumal);
-    scanf("%d", &K);
-    
-    for(int i='a'; i<='z'; i++)
-        buCnt[i] = bumal[i-'a']=='0'? 1 : 0;
-    for(int i=1; i<=N; i++)
-        sumo[i] = sumo[i-1] + buCnt[(int) str[i-1]];
-    
-    for(int i=0; i<N; i++) {
-        ll p = 0, q = 0;
-        for(int j=i+1; j<=N; j++) {
-            // printf("%d %d => %d %d | %s %d\n", i, j, sumo[i], sumo[j], str.substr(i, j-i).c_str(), sumo[j] - sumo[i]);
-            p = (p*27 + str[j-1] - 'a' + 1) % mod1;
-            q = (q*27 + str[j-1] - 'a' + 1) % mod2;
-            if(sumo[j] - sumo[i] <= K) {
-                anso.insert({p, q});
-                // printf("%s es buena\n", str.substr(i, j-i).c_str());
+    string cad;
+    string buenas;
+    vector <int> cpy;
+    int k ;
+    int N ;
+
+    cin >> cad >> buenas >> k;
+
+    N = cad.size();
+    for(int i=0; i < N; i++) {
+        cpy.push_back(cad[i] - 'a');
+    }
+    for(int i = 0; i < (int) buenas.size(); i++) {
+        buenas[i] -= '0';
+    }
+
+    for(int i=0; i < N; i++) {
+        int malaCnt = 0;
+        Mint crg = 0;
+        for(int j=i; j < N; j++) {
+            if(!buenas[cpy[j]]) {
+                malaCnt ++;
             }
+            crg = crg * 27 + (cpy[j] + 1);
+            if(malaCnt > k) {
+                break;
+            }
+            usd.insert(crg);
         }
     }
 
-    ans = anso.size();
-    printf("%d\n", ans);
+    printf("%d\n", (int) usd.size());
 }

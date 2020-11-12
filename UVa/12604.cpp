@@ -1,90 +1,125 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
-// #define ll int
-const ll mod1 = (1<<19)-1;
-// const ll mod2 = 1e9 + 7;
-// const ll mod2 = 1e8 + 7;
-const ll mod2 = (1LL<<31)-1;
-// const ll mod1 = 1 ;
-// const ll mod2 = (1<<19)-1;
-// const int mod1 = 1229;
-// const int mod2 = 4321;
-const int limS = 5e5 + 5;
-const int limW = 5e4 + 5;
-const int limA = 70;
+typedef long long ll;
+const ll MOD = 7927217405306359LL;
+const ll MOD2 = 9898171296063599LL;
+const int LIM_N = 5e5 + 5;
+const int LIM_ALF = 128;
 
-// map <ll, int> aprs;
-// int aprs[mod1][mod2];
-map <ll, int> aprs[mod1];
-char A[limA], W[limW], S[limS];
-int revr[300];
+struct Mint {
+    ll x, y, z ;
+    Mint(const ll x) {
+        this->x = this->y = this->z = x;
+    }
+    Mint(const ll x, const ll y) {
+        this->x = x % MOD;
+        this->y = y % MOD2;
+    }
+    Mint operator+(const Mint otr) {
+        return Mint(
+            this->x + otr.x,
+            this->y + otr.y
+        );
+    }
+    Mint operator*(const Mint otr) {
+        return Mint(
+            this->x * otr.x,
+            this->y * otr.y
+        );
+    }
+    Mint operator-(const Mint otr) {
+        return Mint(
+            this->x - otr.x + MOD,
+            this->y - otr.y + MOD2
+        );
+    }
+    bool operator==(const Mint otr) {
+        return this->x == otr.x ;
+    }
+};
+
+int tamAlf, tamPal, tamTxt;
+char alfb[LIM_ALF];
+char pal[LIM_N];
+char txt[LIM_N];
+char rev[LIM_ALF];
+Mint potPal = 0;
+
+void calculaRev(char *s) {
+    for(int i=0; s[i]; i++) {
+        rev[(int) s[i]] = i;
+    }
+}
+
+void simplificaS(char *s, int lenS) {
+    for(int i=0; i < lenS; i++) {
+        s[i] = rev[(int) s[i]];
+    }
+}
+
+void shiftea(char *s, int lenS, int BAS) {
+    for(int i=0; i < lenS; i++) {
+        s[i] = (s[i]+1) % BAS;
+    }
+}
+
+Mint calcHash(char *s, int lenS, int BAS) {
+    potPal = 1;
+    Mint ans = 0;
+    for(int i = 0; i < lenS; i++) {
+        ans = ans*BAS + s[i];
+        potPal = potPal * BAS;
+    }
+    return ans;
+}
+
+int numApr(const char *s, int lenS, const Mint hash, const int BAS, const int L) {
+    Mint crg = 0;
+    int ans = 0;
+    for(int i = 0; i < lenS; i++) {
+        crg = crg*BAS + s[i];
+        if(i >= L) {
+            crg = crg - potPal * s[i-L];
+        }
+        if(i >= L -1 && crg == hash) {
+            ans ++;
+            if(ans == 2) {
+                return ans;
+            }
+        }
+    }
+    return ans;
+}
 
 void testCase() {
-    // aprs.clear();
-    for(int i=mod1; i>=0; i--)
-    //     aprs[i].clear();
-        aprs[i] = map<ll, int>();
-    // memset(aprs, 0, sizeof(aprs));
-    int tamA, tamW, tamS;
-    ll pot1 = 1, pot2 = 1;
-    ll num1 = 0, num2 = 0;
+    scanf("%s", alfb); tamAlf = strlen(alfb);
+    scanf("%s", pal); tamPal = strlen(pal);
+    scanf("%s", txt); tamTxt = strlen(txt);
 
-    scanf("%s", A); tamA = strlen(A);
-    scanf("%s", W); tamW = strlen(W);
-    scanf("%s", S); tamS = strlen(S);
-    
-    for(int i=0; i<tamW; i++) {
-        pot1 = (pot1*tamA)%mod1;
-        pot2 = (pot2*tamA)%mod2;
-    }
-    pot1 = (mod1-pot1)%mod1;
-    pot2 = (mod2-pot2)%mod2;
-    
-    for(int i=0; i<tamA; i++)
-        revr[(int) A[i]] = i;
-    for(int i=0; i<tamW; i++)
-        W[i] = revr[(int) W[i]];
-    for(int i=0; i<tamS; i++) {
-        S[i] = revr[(int) S[i]];
-        num1 = (num1*tamA + S[i])%mod1;
-        num2 = (num2*tamA + S[i])%mod2;
-        if(i>=tamW) {
-            num1 = (num1 + (pot1*S[i-tamW])%mod1)%mod1;
-            num2 = (num2 + (pot2*S[i-tamW])%mod2)%mod2;
+    calculaRev(alfb);
+    simplificaS(pal, tamPal);
+    simplificaS(txt, tamTxt);
+
+    vector<int> ans;
+    for(int i=0; i < tamAlf; i++) {
+        Mint hash = calcHash(pal, tamPal, tamAlf);
+        if(numApr(txt, tamTxt, hash, tamAlf, tamPal) == 1) {
+            ans.push_back(i);
         }
-        if(i>=tamW-1) {
-            aprs[num1][num2] ++;
-            // aprs[num1*mod2 + num2] ++;
-            // printf("Codin %lld %lld => %lld\n", num1, num2, num1*mod2 + num2);
-        }
+        shiftea(pal, tamPal, tamAlf);
     }
 
-    list <int> ans;
-    for(int sft=0; sft<tamA; sft++) {
-        num1 = 0;
-        num2 = 0;
-        for(int i=0; i<tamW; i++) {
-            num1 = (num1*tamA + W[i])%mod1;
-            num2 = (num2*tamA + W[i])%mod2;
-            W[i] = (W[i]+1)%tamA;
-        }
-        // auto it = aprs.find(num1*mod2 + num2);
-        auto it = aprs[num1].find(num2);
-        if(it!=aprs[num1].end() && it->second==1)
-            ans.push_back(sft);
-        // if(aprs[num1][num2]==1)
-        //     ans.push_back(sft);
-    }
-    if(ans.size()==0) {
+    if(ans.size() == 0) {
         printf("no solution\n");
     }
-    else if(ans.size()==1)
-        printf("unique: %d\n", *ans.begin());
+    else if(ans.size() == 1) {
+        printf("unique: %d\n", ans[0]);
+    }
     else {
         printf("ambiguous:");
-        for(const int &a:ans)
-            printf(" %d", a);
+        for(const int x : ans) {
+            printf(" %d", x);
+        }
         printf("\n");
     }
 }

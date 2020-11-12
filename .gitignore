@@ -1,13 +1,6 @@
 # Ignore everything
-*
-
-# But not these files...
-!.gitignore
-!*.cpp
-!*.c
-!*.py
-!*.java
-
-
-# ...even if they are in subdirectories
-!*/
+*.o
+*.bin
+*.in
+*.out
+.ccls-cache/*
