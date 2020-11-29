@@ -1,109 +1,98 @@
 #include <bits/stdc++.h>
 using namespace std;
+const int LIM_C = 26;
 const int LIM_N = 1e5 + 5;
 
-int toNum(const char a) {
-    return a - 'a';
+inline int toNum(const char c) {
+    return c - 'a';
 }
 
 struct Trie {
     struct Nodo {
-        int cnt;
-        Nodo* sig[26];
+        int cnt ;
+        Nodo* sig[LIM_C];
+
         Nodo() {
             cnt = 0;
-            for(int i=0; i < 26; i++) {
+            for(int i=0; i < LIM_C; i++) {
                 sig[i] = NULL;
             }
         }
     };
-    Nodo raiz;
-    multiset<int> reps[LIM_N];
 
-    void insertString(string &s) {
-        const char *c = s.c_str();
+    Nodo raiz;
+    multiset <int> crgs[LIM_N];
+
+    void insertString(const string &s) {
         Nodo *actual = &raiz;
         int dep = 0;
-        auto it = reps[dep].find(-actual->cnt);
-        if(it != reps[dep].end())
-            reps[dep].erase(it);
+
         actual->cnt ++;
-        reps[dep].insert(-actual->cnt);
-        while(*c) {
-            int val = toNum(*c);
-            if(actual->sig[val] == NULL) {
-                actual->sig[val] = new Nodo();
+        for(const auto &i : s) {
+            const auto c = toNum(i);
+            if(actual->sig[c] == NULL) {
+                actual->sig[c] = new Nodo();
             }
-            actual = actual->sig[val];
-            c++;
+            actual = actual->sig[c];
             dep ++;
-            it = reps[dep].find(-actual->cnt);
-            if(it != reps[dep].end())
-                reps[dep].erase(it);
+            auto it = crgs[dep].find(-actual->cnt);
+            if(it != crgs[dep].end())
+                crgs[dep].erase(it);
             actual->cnt ++;
-            reps[dep].insert(-actual->cnt);
+            crgs[dep].insert(-actual->cnt);
         }
     }
 
-    void deleteString(string &s) {
-        const char *c = s.c_str();
+    void deleteString(const string &s) {
         Nodo *actual = &raiz;
-        int dep  = 0;
-        auto it = reps[dep].find(-actual->cnt);
-        if(it != reps[dep].end())
-            reps[dep].erase(it);
+        int dep = 0;
         actual->cnt --;
-        reps[dep].insert(-actual->cnt);
-        while(*c) {
-            int val = toNum(*c);
-            actual = actual->sig[val];
-            c++;
+        for(const auto &i : s) {
+            const auto c = toNum(i);
+            actual = actual->sig[c];
             dep ++;
-            it = reps[dep].find(-actual->cnt);
-            if(it != reps[dep].end())
-                reps[dep].erase(it);
+            auto it = crgs[dep].find(-actual->cnt);
+            if(it != crgs[dep].end())
+                crgs[dep].erase(it);
             actual->cnt --;
-            reps[dep].insert(-actual->cnt);
+            crgs[dep].insert(-actual->cnt);
         }
     }
 
-    bool existsPref(const int k, const int l) {
-        if(reps[l].empty()) {
-            return false;
-        }
-        return -(*reps[l].begin()) >= k;
+    bool existsGroup(const int k, const int l) {
+        if(crgs[l].empty()) return false;
+        auto it = crgs[l].begin();
+        return -*it >= k ;
     }
 };
-
-Trie trie;
-string strs[LIM_N];
-bool borrado[LIM_N];
 
 int main() {
     cin.sync_with_stdio();
     cout.sync_with_stdio();
-    int Q ;
+    int Q, tq ;
+    string S[LIM_N] ;
+    Trie trie ;
+
     cin >> Q ;
     for(int i=0; i < Q; i++) {
-        int qt ;
-        cin >> qt ;
-        if(qt == 1) {
-            cin >> strs[i];
-            reverse(strs[i].begin(), strs[i].end());
-            trie.insertString(strs[i]);
+        cin >> tq;
+        if(tq == 1) {
+            cin >> S[i];
+            reverse(S[i].begin(), S[i].end());
+            trie.insertString(S[i]);
         }
-        else if(qt == 2) {
-            int k, l ;
-            cin >> k >> l ;
-            cout << (trie.existsPref(k, l)? "YES\n" : "NO\n") ;
+        else if(tq == 2) {
+            int k, l;
+            cin >> k >> l;
+            cout << (trie.existsGroup(k, l)? "YES\n" : "NO\n");
         }
-        else if(qt == 3) {
-            int qid ;
-            cin >> qid;
-            qid --;
-            if(!borrado[qid]) {
-                borrado[qid] = true;
-                trie.deleteString(strs[qid]);
+        else if(tq == 3) {
+            int d ;
+            cin >> d ;
+            d --;
+            if(S[d].length()) {
+                trie.deleteString(S[d]);
+                S[d] = "";
             }
         }
     }

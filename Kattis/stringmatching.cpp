@@ -1,34 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector <int> calcPi(const string &W) {
-    int lenW = W.size();
-    vector <int> pi(lenW+1);
-    int posW = 0, maxR = -1;
-    pi[0] = -1;
-    while(posW < lenW) {
-        while(maxR >= 0 && W[posW] != W[maxR]) {
-            maxR = pi[maxR];
+vector <int> calcZ(const string &W, const string &_S) {
+    string S = W + "\n" + _S;
+    int lenS = S.length();
+    vector <int> z(lenS);
+    int x=0, y=0 ;
+    for(int i=1; i < lenS; i++) {
+        z[i] = max(0, min(z[i-x], y - i + 1));
+        while(S[z[i]] == S[i + z[i]]) {
+            x = i ;
+            y = i + z[i];
+            z[i] ++;
         }
-        posW++, maxR++;
-        pi[posW] = maxR;
     }
-    return pi;
+    return z;
 }
 
 vector <int> getMatches(const string &W, const string &S) {
-    vector <int> pi = calcPi(W);
+    auto z = calcZ(W, S);
+    int lenW = W.size(), lenWS = W.size() + 1 + S.size();
     vector <int> matches ;
-    int posW = 0, posS = 0;
-    int lenW = W.size(), lenS = S.size();
-    while(posS < lenS) {
-        while(posW >= 0 && W[posW] != S[posS]) {
-            posW = pi[posW];
-        }
-        posW++, posS++;
-        if(posW == lenW) {
-            matches.push_back(posS - lenW);
-            posW = pi[posW];
+    for(int i=lenW+1; i < lenWS; i++) {
+        if(z[i] == lenW) {
+            matches.push_back(i - (lenW + 1));
         }
     }
     return matches;
