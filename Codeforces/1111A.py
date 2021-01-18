@@ -7,4 +7,5 @@ def main():
     print('Yes' if dts(input()) == dts(input()) else 'No')
 
 
-main()
+print('Hello there')
+# main()
