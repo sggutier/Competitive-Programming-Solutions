@@ -1,6 +1,6 @@
-# Ignore everything
 *.o
 *.bin
 *.in
 *.out
+*.class
 .ccls-cache/*

@@ -7,134 +7,93 @@ using namespace std;
 typedef long long ll;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
-#include <bits/extc++.h> /** keep-include */
+const int LIM_N = 3e5 + 5 ;
 
-const ll INF = numeric_limits<ll>::max() / 4;
-typedef vector<ll> VL;
+int R, C ;
+vector <string> mapa;
+vector <string> ans;
+int rev[128];
+int lets[4];
 
-struct MCMF {
-    int N;
-    vector<vi> ed, red;
-    vector<VL> cap, flow, cost;
-    vi seen;
-    VL dist, pi;
-    vector<pii> par;
-
-    MCMF(int N) :
-        N(N), ed(N), red(N), cap(N, VL(N)), flow(cap), cost(cap),
-        seen(N), dist(N), pi(N), par(N) {}
-
-    void addEdge(int from, int to, ll cap, ll cost) {
-        this->cap[from][to] = cap;
-        this->cost[from][to] = cost;
-        ed[from].push_back(to);
-        red[to].push_back(from);
+int calcRw(int a, int b, int x, int y, int dx, int dy) {
+    int ansV = 0 ;
+    for(; x < R && y < C; x += dx, y += dy) {
+        ans[x][y] = lets[a];
+        if(mapa[x][y] != a)
+            ansV ++;
+        swap(a, b);
     }
+    return ansV;
+}
 
-    void path(int s) {
-        fill(all(seen), 0);
-        fill(all(dist), INF);
-        dist[s] = 0; ll di;
-
-        __gnu_pbds::priority_queue<pair<ll, int>> q;
-        vector<decltype(q)::point_iterator> its(N);
-        q.push({0, s});
-
-        auto relax = [&](int i, ll cap, ll cost, int dir) {
-            ll val = di - pi[i] + cost;
-            if (cap && val < dist[i]) {
-                dist[i] = val;
-                par[i] = {s, dir};
-                if (its[i] == q.end()) its[i] = q.push({-dist[i], i});
-                else q.modify(its[i], {-dist[i], i});
-            }
-        };
-
-        while (!q.empty()) {
-            s = q.top().second; q.pop();
-            seen[s] = 1; di = dist[s] + pi[s];
-            trav(i, ed[s]) if (!seen[i])
-                relax(i, cap[s][i] - flow[s][i], cost[s][i], 1);
-            trav(i, red[s]) if (!seen[i])
-                relax(i, flow[i][s], -cost[i][s], 0);
+int calcCst(int a, int b, int dx, int dy, bool print = false) {
+    int ans = 0 ;
+    int c = -1, d ;
+    for(int i=0; i < 4; i++) {
+        if(i == a || i == b) continue;
+        if(c == -1)
+            c = i ;
+        else
+            d = i;
+    }
+    for(int i=0, j=0; i < R && j < C; i += dy, j += dx) {
+        int ca = calcRw(a, b, i, j, dx, dy);
+        int cb = calcRw(b, a, i, j, dx, dy);
+        if(ca < cb) {
+            ans += ca ;
+            if(print)
+                calcRw(a, b, i, j, dx, dy);
         }
-        rep(i,0,N) pi[i] = min(pi[i] + dist[i], INF);
-    }
-
-    pair<ll, ll> maxflow(int s, int t) {
-        ll totflow = 0, totcost = 0;
-        while (path(s), seen[t]) {
-            ll fl = INF;
-            for (int p,r,x = t; tie(p,r) = par[x], x != s; x = p)
-                fl = min(fl, r ? cap[p][x] - flow[p][x] : flow[x][p]);
-            totflow += fl;
-            for (int p,r,x = t; tie(p,r) = par[x], x != s; x = p)
-                if (r) flow[p][x] += fl;
-                else flow[x][p] -= fl;
+        else {
+            ans += cb ;
+            if(print)
+                calcRw(b, a, i, j, dx, dy);
         }
-        rep(i,0,N) rep(j,0,N) totcost += cost[i][j] * flow[i][j];
-        return {totflow, totcost};
+        swap(a, c);
+        swap(b, d);
     }
-
-    // If some costs can be negative, call this before maxflow:
-    void setpi(int s) { // (otherwise, leave this out)
-        fill(all(pi), INF); pi[s] = 0;
-        int it = N, ch = 1; ll v;
-        while (ch-- && it--)
-            rep(i,0,N) if (pi[i] != INF)
-                trav(to, ed[i]) if (cap[i][to])
-                    if ((v = pi[i] + cost[i][to]) < pi[to])
-                        pi[to] = v, ch = 1;
-        assert(it >= 0); // negative cost cycle
-    }
-};
-
-const int LIM_N = 3e5 + 5;
+    return ans;
+}
 
 int main() {
-    int R, C ;
+    rev['C'] = 1;
+    rev['G'] = 2;
+    rev['T'] = 3;
+    lets[0] = 'A';
+    lets[1] = 'C';
+    lets[2] = 'G';
+    lets[3] = 'T';
     char tmp[LIM_N];
     scanf("%d%d", &R, &C);
-
-    MCMF fl(R*C*9 + 2);
-    int ini = R*C*9, fin = ini + 1;
-    printf("%d\n", fin+1);
-    for(int i=1; i < R; i++) {
-        for(int j = 1; j < C; j++) {
-            for(int d=0; d < 4; d++) {
-                fl.addEdge(ini, i*C + j + R*C*d, 1, 0);
-                fl.addEdge(i*C + j + R*C*d, (i-0)*C + (j-0) + R*C*(d + 4), 1, 0);
-                fl.addEdge(i*C + j + R*C*d, (i-0)*C + (j-1) + R*C*(d + 4), 1, 0);
-                fl.addEdge(i*C + j + R*C*d, (i-1)*C + (j-0) + R*C*(d + 4), 1, 0);
-                fl.addEdge(i*C + j + R*C*d, (i-1)*C + (j-1) + R*C*(d + 4), 1, 0);
-            }
-        }
-    }
-
+    mapa.resize(R);
+    ans.resize(R);
     for(int i=0; i < R; i++) {
         scanf("%s", tmp);
+        mapa[i] = tmp;
+        ans[i] = tmp;
         for(int j=0; j < C; j++) {
-            int v = tmp[j]=='A'? 0 : (tmp[j] == 'C'? 1 : (tmp[j] == 'G'? 2 : 3));
-            printf("%d", v);
-            for(int d=0; d < 4; d++) {
-                fl.addEdge(i*C + j + R*C*(d+4), i*C + j + R*C*8, 1, v!=d);
-            }
-            fl.addEdge(i*C + j + R*C*8, fin, 1, 0);
+            mapa[i][j] = rev[(int) mapa[i][j]];
         }
-        printf("\n");
-    }
-    printf("\n");
-        auto ans = fl.maxflow(ini, fin);
-    for(int i=0; i < R; i++) {
-        for(int j=0; j < C; j++) {
-            for(int d=0; d < 4; d++) {
-                if(fl.flow[i*C + j + R*C*(d+4)][i*C + j + R*C*8] > 0)
-                    printf("%d", d);
-            }
-        }
-        printf("\n");
     }
 
+    int minCst = R*C + 1;
+    int ansDx, ansDy, ansA, ansB;
+    for(int dx=0, dy=1; dx < 2; dx++, dy--) {
+        for(int a=0; a < 4; a++) {
+            for(int b=a+1; b < 4; b++) {
+                int c = calcCst(a, b, dx, dy);
+                if( c >= minCst ) continue;
+                minCst = c ;
+                ansDx = dx;
+                ansDy = dy;
+                ansA = a;
+                ansB = b;
+            }
+        }
+    }
 
-    printf("%lld %lld\n", ans.first, ans.second);
+    calcCst(ansA, ansB, ansDx, ansDy, true);
+    // printf("%d\n", minCst);
+    for(int i=0; i < R; i++)
+        printf("%s\n", ans[i].c_str());
 }
